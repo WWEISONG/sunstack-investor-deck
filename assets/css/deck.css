@@ -504,11 +504,11 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
 .chart .ax        { stroke: var(--line); stroke-width: 1; }
 .chart .gridline  { stroke: var(--line-soft); stroke-width: 1; }
 .chart .zero      { stroke: var(--muted); stroke-width: 1.25; stroke-dasharray: 5 4; opacity: .8; }
-.chart .tick      { fill: var(--muted); font-size: 13px; }
-.chart .axname    { fill: var(--muted); font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
-.chart .lbl       { fill: var(--body); font-size: 14px; font-weight: 500; }
-.chart .lbl-b     { fill: var(--ink); font-size: 15px; font-weight: 700; }
-.chart .val       { fill: var(--ink); font-size: 14.5px; font-weight: 700; }
+.chart .tick      { fill: var(--muted); font-size: 17px; }
+.chart .axname    { fill: var(--muted); font-size: 16px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
+.chart .lbl       { fill: var(--body); font-size: 18px; font-weight: 500; }
+.chart .lbl-b     { fill: var(--ink); font-size: 19.5px; font-weight: 700; }
+.chart .val       { fill: var(--ink); font-size: 18.5px; font-weight: 700; }
 .chart .band      { fill: var(--amber); opacity: .12; }
 .chart .ln        { fill: none; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
 .chart .ln.base   { stroke: var(--amber); stroke-width: 3.5; }
@@ -520,7 +520,7 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
 .chart .bar-bad   { fill: var(--amber); }
 .chart .bar-base  { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 4 3; }
 .chart .callout   { fill: var(--amber-soft); stroke: var(--amber); stroke-width: 1; }
-.chart .callout-t { fill: var(--amber-strong); font-size: 14.5px; font-weight: 700; }
+.chart .callout-t { fill: var(--amber-strong); font-size: 18.5px; font-weight: 700; }
 
 .dark .chart .ax        { stroke: var(--line-dark); }
 .dark .chart .gridline  { stroke: #2a251d; }
@@ -552,10 +552,10 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
 
 /* Charts scale to fit the available height; default preserveAspectRatio
    letterboxes rather than distorting. */
-.chart { height: clamp(180px, 30vh, 290px); }
+.chart { height: clamp(190px, 37vh, 365px); }
 .chart.compact { height: clamp(120px, 20vh, 215px); }
 @media (max-height: 760px) {
-  .chart { height: clamp(150px, 25vh, 235px); }
+  .chart { height: clamp(160px, 30vh, 265px); }
   .chart.compact { height: clamp(105px, 17vh, 170px); }
 }
 @media (max-width: 900px) { .chart { height: auto; } .chart.compact { height: auto; } }
@@ -567,12 +567,12 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
 .dark .chart .connector { stroke: var(--on-dark-muted); opacity: .5; }
 .chart .lead { stroke: var(--amber); stroke-width: 1.25; }
 .dark .chart .lead { stroke: var(--gold); }
-.chart .bignum { fill: var(--amber-strong); font-size: 40px; font-weight: 800; letter-spacing: -.03em; }
+.chart .bignum { fill: var(--amber-strong); font-size: 54px; font-weight: 800; letter-spacing: -.03em; }
 .dark .chart .bignum { fill: var(--gold); }
-.chart.tall { height: clamp(190px, 33vh, 320px); }
+.chart.tall { height: clamp(200px, 40vh, 385px); }
 .chart.short { height: clamp(110px, 19vh, 190px); }
 @media (max-height: 760px) {
-  .chart.tall { height: clamp(160px, 27vh, 250px); }
+  .chart.tall { height: clamp(170px, 32vh, 285px); }
   .chart.short { height: clamp(95px, 15vh, 150px); }
 }
 @media (max-width: 900px) { .chart.tall, .chart.short { height: auto; } }
@@ -615,3 +615,29 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
 .chart .zeroval { fill: #2f8a6b; font-weight: 800; }
 .dark .chart .zeroline { stroke: #6fc3b0; }
 .dark .chart .zeroval { fill: #6fc3b0; }
+
+/* ---------------- Use-case tiles: icon treatment ---------------- */
+.uc-top { display: flex; align-items: center; gap: 12px; margin-bottom: clamp(10px, 1.6vh, 16px); }
+.uc-ico {
+  width: clamp(38px, 3.4vw, 50px); height: clamp(38px, 3.4vw, 50px);
+  border-radius: 50%; flex: none;
+  background: var(--amber-soft); color: var(--amber-strong);
+  display: grid; place-items: center;
+}
+.dark .uc-ico { background: rgba(232,147,42,.15); color: var(--gold); }
+.uc-ico svg { width: 54%; height: 54%; display: block; }
+.uc-name { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.uc-mod { font-size: clamp(18px, 1.85vw, 26px); font-weight: 800; letter-spacing: -.025em; color: var(--ink); line-height: 1; }
+.dark .uc-mod { color: var(--on-dark); }
+.uc-count { font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #2f8a6b; font-weight: 600; }
+.dark .uc-count { color: #6fc3b0; }
+.uc-list li {
+  position: relative; padding-left: 15px;
+  font-size: clamp(12.5px, 1.06vw, 15px);
+}
+.uc-list li::before {
+  content: ""; position: absolute; left: 0; top: 1em; transform: translateY(-50%);
+  width: 5px; height: 5px; border-radius: 50%; background: var(--amber); opacity: .55;
+}
+.dark .uc-list li::before { background: var(--gold); opacity: .6; }
+@media (max-height: 760px) { .uc-top { margin-bottom: 8px; } }
