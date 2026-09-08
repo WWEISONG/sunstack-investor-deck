@@ -165,6 +165,9 @@ h3.h     { font-size: clamp(19px, 2.1vw, 27px); letter-spacing: -.018em; }
 /* ---------------- Grids ---------------- */
 
 .grid { display: grid; gap: clamp(14px, 1.6vw, 24px); }
+/* grid/flex children default to min-width:auto and refuse to shrink below
+   min-content, which pushes siblings out of the track. */
+.grid > *, .split > *, .flow > * { min-width: 0; }
 .g-2 { grid-template-columns: repeat(2, 1fr); }
 .g-3 { grid-template-columns: repeat(3, 1fr); }
 .g-4 { grid-template-columns: repeat(4, 1fr); }
@@ -247,16 +250,23 @@ h3.h     { font-size: clamp(19px, 2.1vw, 27px); letter-spacing: -.018em; }
 
 /* ---------------- Lists ---------------- */
 
+/* Marker is absolutely positioned so the li stays a plain block: any mix of
+   inline elements and bare text flows normally. (A grid/flex li auto-places
+   stray text nodes into the marker column — one word per line.) */
 .ticks { list-style: none; }
 .ticks li {
-  display: grid; grid-template-columns: 20px 1fr; gap: 11px;
-  align-items: start; padding: clamp(6px, .95vh, 10px) 0;
-  font-size: clamp(13px, 1.08vw, 15.5px); line-height: 1.45;
+  position: relative;
+  padding: clamp(5px, .8vh, 9px) 0 clamp(5px, .8vh, 9px) 26px;
+  font-size: clamp(12.5px, 1.02vw, 15px); line-height: 1.45;
   border-bottom: 1px solid var(--line-soft);
 }
 .dark .ticks li { border-bottom-color: var(--line-dark); }
 .ticks li:last-child { border-bottom: 0; }
-.ticks .m { color: var(--amber-strong); font-weight: 800; font-size: 14px; line-height: 1.5; }
+.ticks .m {
+  position: absolute; left: 0; top: clamp(5px, .8vh, 9px);
+  color: var(--amber-strong); font-weight: 800;
+  font-size: 13px; line-height: 1.6;
+}
 .dark .ticks .m { color: var(--gold); }
 .ticks .m.grey { color: var(--muted); font-weight: 500; }
 
@@ -425,12 +435,28 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
 
 /* ---------------- Responsive ---------------- */
 
-@media (max-height: 800px) {
+/* Laptop-height tier: table-heavy slides must still fit one screen. */
+@media (max-height: 900px) {
+  .slide { padding-block: clamp(30px, 4vh, 52px); }
+  .display { font-size: clamp(30px, 4.4vw, 56px); }
+  h2.h { font-size: clamp(23px, 3.1vw, 40px); }
+  .stack > * + * { margin-top: clamp(10px, 1.5vh, 17px); }
+  .tbl th, .tbl td { padding-block: clamp(5px, .8vh, 9px); }
+  .card { padding: clamp(13px, 1.5vw, 22px); }
+  .ticks li { padding-block: clamp(4px, .6vh, 7px); }
+}
+@media (max-height: 760px) {
   html { scroll-snap-type: y proximity; }
-  .slide { padding-block: clamp(34px, 4.4vh, 60px); }
-  .display { font-size: clamp(30px, 4.6vw, 58px); }
-  h2.h { font-size: clamp(24px, 3.3vw, 42px); }
-  .stack > * + * { margin-top: clamp(11px, 1.7vh, 18px); }
+  .slide { padding-block: 26px; }
+  .display { font-size: clamp(28px, 4vw, 48px); }
+  h2.h { font-size: clamp(21px, 2.8vw, 34px); }
+  .lede { font-size: clamp(14px, 1.25vw, 17px); }
+  .stack > * + * { margin-top: clamp(8px, 1.2vh, 14px); }
+  .tbl th, .tbl td { padding-block: 4px; font-size: clamp(11px, .95vw, 13px); }
+  .card { padding: clamp(11px, 1.3vw, 18px); }
+  .ticks li { padding-block: 3px; }
+  .note { font-size: 11px; }
+  .stat .n { font-size: clamp(26px, 3.2vw, 42px); }
 }
 
 @media (max-width: 900px) {
