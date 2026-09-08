@@ -10,23 +10,28 @@ behind a national network of solar-powered AI compute nodes.
 This is the **economics companion** to the SunStack product deck. It deliberately does not
 re-tell the background story or demo the product — it answers the money questions:
 
-| # | Slide |
-|---|---|
-| 01 | Cover — headline economics |
-| 02 | Four revenue lines, one cost stack |
-| 03 | What a token is worth — price benchmarked against the market |
-| 04 | Throughput — batched serving vs single-stream |
-| 05 | Cost of a unit — bandwidth per dollar |
-| 06 | **Unit economics** — one node, floor / base / upside |
-| 07 | **Payback equation** and one-variable sensitivities |
-| 08 | Own the node, or sell it — capital structure |
-| 09 | **1,000-node fleet P&L** and break-even fleet size |
-| 10 | Revenue beyond inference |
-| 11 | Why the margin holds — the cost floor |
-| 12 | Market and the share required |
-| 13 | Fact vs. estimate — what's verified, what's being tested |
-| 14 | Capital and use of funds |
-| 15 | Appendix — assumptions and sources |
+| # | Slide | Visual |
+|---|---|---|
+| 01 | Cover — headline economics | |
+| 02 | Four revenue lines, one cost stack | |
+| 03 | What a token is worth — benchmarked against the market | bar chart |
+| 04 | Throughput — batched serving vs single-stream | |
+| 05 | Cost of a unit — bandwidth per dollar | |
+| 06 | **Unit economics** — floor / base / upside | |
+| 07 | **Payback** — cumulative cash per unit over 5 years | **line + range chart** |
+| 08 | **What moves it** — payback sensitivity | **tornado chart** |
+| 09 | Own the node, or sell it — capital structure | |
+| 10 | **1,000-node fleet P&L** and break-even | **break-even chart** |
+| 11 | Revenue beyond inference | |
+| 12 | Why the margin holds — the cost floor | |
+| 13 | **Supply side** — 4.3M solar homes, and the funnel to eligible | funnel chart |
+| 14 | Market and the share required | bar chart |
+| 15 | Fact vs. estimate — what's verified, what's being tested | |
+| 16 | Capital and use of funds | |
+| 17 | Appendix — assumptions and sources | |
+
+Charts are hand-authored inline SVG — no chart library and no CDN, so the deck renders
+identically offline, in print, and in both light and dark slide treatments.
 
 ## Using it
 
@@ -37,7 +42,7 @@ re-tell the background story or demo the product — it answers the money questi
 | First / last | `Home` / `End` |
 | Export to PDF | press `P`, then "Save as PDF" (page size preset to 297 × 167 mm landscape) |
 
-Deep links work — append `#s6` to open straight on unit economics.
+Deep links work — append `#s7` to open straight on the payback curve.
 
 ## Design
 
@@ -45,15 +50,15 @@ Inherits the design language of `sunstackai.com.au`: full-bleed tiles, a single 
 accent (`#e8932a`), one shadow, tight display type, self-hosted Inter and JetBrains Mono.
 No CDN calls at runtime.
 
-Layout is verified with a Playwright audit across eight desktop viewports (1024×768 →
-1920×1080, including short 640–820px laptop heights), checking for slides taller than the
-viewport, horizontal overflow, off-screen elements, collapsed text columns, and stray text
-nodes inside grid/flex containers.
+Layout is verified with a Playwright audit across eleven viewports (1024×768 → 1920×1080,
+including short 600–820px laptop heights, plus tablet and phone), checking for slides taller
+than the viewport, horizontal overflow, off-screen elements, collapsed text columns, and stray
+text nodes inside grid/flex containers.
 
 ## Structure
 
 ```
-index.html          15 sections, self-contained
+index.html          17 sections + inline SVG charts, self-contained
 assets/css/deck.css design tokens, slide shell, components, print styles
 assets/js/deck.js   keyboard nav, dot rail, progress bar, deep links
 assets/fonts/       Inter + JetBrains Mono variable woff2 (self-hosted)

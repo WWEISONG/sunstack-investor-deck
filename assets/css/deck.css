@@ -457,6 +457,9 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
   .ticks li { padding-block: 3px; }
   .note { font-size: 11px; }
   .stat .n { font-size: clamp(26px, 3.2vw, 42px); }
+  .bars { gap: 8px; }
+  .bars .track { height: clamp(20px, 2.6vh, 27px); }
+  .legend { gap: 14px; }
 }
 
 @media (max-width: 900px) {
@@ -490,3 +493,69 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
   .display { font-size: 40pt; }
   h2.h { font-size: 27pt; }
 }
+
+/* ---------------- Charts (hand-authored inline SVG) ---------------- */
+
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.chart text {
+  font-family: "Inter", system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.chart .ax        { stroke: var(--line); stroke-width: 1; }
+.chart .gridline  { stroke: var(--line-soft); stroke-width: 1; }
+.chart .zero      { stroke: var(--muted); stroke-width: 1.25; stroke-dasharray: 5 4; opacity: .8; }
+.chart .tick      { fill: var(--muted); font-size: 11px; }
+.chart .axname    { fill: var(--muted); font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
+.chart .lbl       { fill: var(--body); font-size: 12px; font-weight: 500; }
+.chart .lbl-b     { fill: var(--ink); font-size: 12.5px; font-weight: 700; }
+.chart .val       { fill: var(--ink); font-size: 12px; font-weight: 700; }
+.chart .band      { fill: var(--amber); opacity: .12; }
+.chart .ln        { fill: none; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.chart .ln.base   { stroke: var(--amber); stroke-width: 3.5; }
+.chart .ln.edge   { stroke: var(--gold); stroke-width: 1.5; opacity: .75; }
+.chart .ln.alt    { stroke: #b8b0a2; stroke-width: 2.5; stroke-dasharray: 6 4; }
+.chart .dot       { fill: var(--amber); stroke: var(--canvas); stroke-width: 2.5; }
+.chart .dot.alt   { fill: #b8b0a2; }
+.chart .bar-good  { fill: #4aa882; }
+.chart .bar-bad   { fill: var(--amber); }
+.chart .bar-base  { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 4 3; }
+.chart .callout   { fill: var(--amber-soft); stroke: var(--amber); stroke-width: 1; }
+.chart .callout-t { fill: var(--amber-strong); font-size: 12px; font-weight: 700; }
+
+.dark .chart .ax        { stroke: var(--line-dark); }
+.dark .chart .gridline  { stroke: #2a251d; }
+.dark .chart .zero      { stroke: var(--on-dark-muted); }
+.dark .chart .tick,
+.dark .chart .axname    { fill: var(--on-dark-muted); }
+.dark .chart .lbl       { fill: var(--on-dark-muted); }
+.dark .chart .lbl-b,
+.dark .chart .val       { fill: var(--on-dark); }
+.dark .chart .band      { fill: var(--gold); opacity: .14; }
+.dark .chart .ln.base   { stroke: var(--gold); }
+.dark .chart .ln.edge   { stroke: var(--gold); opacity: .6; }
+.dark .chart .ln.alt    { stroke: #6b6355; }
+.dark .chart .dot       { fill: var(--gold); stroke: var(--dark); }
+.dark .chart .dot.alt   { fill: #6b6355; }
+.dark .chart .bar-bad   { fill: var(--gold); }
+.dark .chart .callout   { fill: rgba(232,147,42,.16); stroke: rgba(232,147,42,.5); }
+.dark .chart .callout-t { fill: var(--gold); }
+
+.legend { display: flex; flex-wrap: wrap; gap: clamp(12px, 1.8vw, 26px); }
+.legend span { display: inline-flex; align-items: center; gap: 8px; font-size: clamp(11.5px, .96vw, 13px); color: var(--body); }
+.dark .legend span { color: var(--on-dark-muted); }
+.legend i { width: 16px; height: 3px; border-radius: 2px; background: var(--amber); flex: none; }
+.legend i.edge { background: var(--gold); height: 2px; }
+.legend i.alt { background: #b8b0a2; }
+.dark .legend i { background: var(--gold); }
+.dark .legend i.alt { background: #6b6355; }
+.legend i.sw { width: 16px; height: 10px; border-radius: 3px; background: var(--amber); opacity: .18; }
+
+/* Charts scale to fit the available height; default preserveAspectRatio
+   letterboxes rather than distorting. */
+.chart { height: clamp(180px, 30vh, 290px); }
+.chart.compact { height: clamp(120px, 20vh, 215px); }
+@media (max-height: 760px) {
+  .chart { height: clamp(150px, 25vh, 235px); }
+  .chart.compact { height: clamp(105px, 17vh, 170px); }
+}
+@media (max-width: 900px) { .chart { height: auto; } .chart.compact { height: auto; } }
