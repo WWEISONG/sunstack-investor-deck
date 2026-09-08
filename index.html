@@ -8,14 +8,14 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/deck.css?v=263b961d">
+<link rel="stylesheet" href="assets/css/deck.css?v=e8c48d05">
 </head>
 <body>
 
 <div id="progress"></div>
 <a class="skip" href="#s2">Skip to content</a>
 
-<section class="slide dark" id="s1" data-n="01 / 13" data-title="Cover">
+<section class="slide dark" id="s1" data-n="01 / 14" data-title="Cover">
   <div class="wrap stack">
     <div class="eyebrow">SunStack AI &nbsp;·&nbsp; The economics &nbsp;·&nbsp; September 2026</div>
     <h1 class="display">What it costs.<br>What it earns.<br>When it pays back.</h1>
@@ -27,12 +27,12 @@
     </div>
     <p class="note" style="margin-top:clamp(14px,2.4vh,28px)">
       Companion to the SunStack product deck. A$2.4M of capital is already committed.
-      Every figure is third-party verified or flagged as our estimate — slide 11 separates the two.
+      Every figure is third-party verified or flagged as our estimate — slide 12 separates the two.
     </p>
   </div>
 </section>
 
-<section class="slide" id="s2" data-n="02 / 13" data-title="The arbitrage">
+<section class="slide" id="s2" data-n="02 / 14" data-title="The arbitrage">
   <div class="wrap stack">
     <div class="eyebrow">The arbitrage</div>
     <h2 class="h">The same kilowatt-hour,<br>priced three ways.</h2>
@@ -51,7 +51,7 @@
   </div>
 </section>
 
-<section class="slide dark" id="s3" data-n="03 / 13" data-title="What a node earns">
+<section class="slide dark" id="s3" data-n="03 / 14" data-title="What a node earns">
   <div class="wrap stack">
     <div class="eyebrow">Unit economics</div>
     <h2 class="h">One node earns A$2,604 a year.</h2>
@@ -64,10 +64,13 @@
       <div class="card stat"><div class="n">A$2,604</div><div class="l">Net cash to SunStack each year, after the homeowner's 25%</div></div>
       <div class="card stat"><div class="n">65%</div><div class="l">Annual return on the capital deployed per node</div></div>
     </div>
+    <p class="note">Base case, per company-owned unit. Gross revenue = 300 tok/s aggregate × 9 h/day
+      × 60% paid utilisation × A$1.90 per million tokens. Energy is 394 kWh/yr, mostly surplus solar
+      at a 5¢ opportunity cost. Full derivation on slide 14.</p>
   </div>
 </section>
 
-<section class="slide" id="s4" data-n="04 / 13" data-title="Payback">
+<section class="slide" id="s4" data-n="04 / 14" data-title="Payback">
   <div class="wrap stack">
     <div class="eyebrow">Payback</div>
     <h2 class="h">It pays for itself in 18 months.</h2>
@@ -89,10 +92,13 @@
       <span><i class="sw"></i> Floor to upside range</span>
       <span style="color:var(--muted)">Starts at −A$4,000, the all-in cost of one unit</span>
     </div>
+    <p class="note">Cumulative cash, base case, against the A$4,000 all-in cost of one unit.
+      The band spans the floor and upside cases in the appendix — 45%/70% utilisation and
+      A$1.30/A$2.60 pricing. Excludes company overhead, which is carried at fleet level.</p>
   </div>
 </section>
 
-<section class="slide tinted" id="s5" data-n="05 / 13" data-title="The two assumptions">
+<section class="slide tinted" id="s5" data-n="05 / 14" data-title="The two assumptions">
   <div class="wrap stack">
     <div class="eyebrow">The two numbers everything rests on</div>
     <h2 class="h">Both benchmarked, neither guessed.</h2>
@@ -117,7 +123,7 @@
   </div>
 </section>
 
-<section class="slide dark" id="s6" data-n="06 / 13" data-title="What moves it">
+<section class="slide dark" id="s6" data-n="06 / 14" data-title="What moves it">
   <div class="wrap stack">
     <div class="eyebrow">Sensitivity</div>
     <h2 class="h">Even the worst case pays back<br>in two and a half years.</h2>
@@ -131,10 +137,78 @@
       <span><i></i> Slower payback</span>
       <span style="color:var(--muted)">Each bar spans that variable's full plausible range</span>
     </div>
+    <p class="note">Each variable moved alone, everything else held at the base case.
+      Ranges: throughput 200–450 tok/s, price A$1.30–2.50/M, utilisation 45–70%,
+      hardware A$2,000–3,600, homeowner share 20–30%.</p>
   </div>
 </section>
 
-<section class="slide" id="s7" data-n="07 / 13" data-title="Who buys it">
+<section class="slide" id="s7" data-n="07 / 14" data-title="What runs on it">
+  <div class="wrap stack">
+    <div class="eyebrow">The workloads</div>
+    <h2 class="h">What people actually run on it.</h2>
+
+    <div class="grid g-4" style="margin-top:clamp(6px,1.4vh,18px)">
+      <div class="card uc">
+        <div class="uc-head"><span class="uc-mod">Text</span><span class="badge live">Live today</span></div>
+        <ul class="uc-list">
+          <li>Customer support chat &amp; triage</li>
+          <li>Q&amp;A over private documents (RAG)</li>
+          <li>Meeting &amp; report summarisation</li>
+          <li>Translation and localisation</li>
+          <li>Classification, tagging, extraction</li>
+          <li>Code assistance</li>
+          <li>Search &amp; embeddings</li>
+        </ul>
+      </div>
+
+      <div class="card uc">
+        <div class="uc-head"><span class="uc-mod">Image</span><span class="badge live">Live today</span></div>
+        <ul class="uc-list">
+          <li>Marketing &amp; product imagery</li>
+          <li>Design variants and mockups</li>
+          <li>Photo editing &amp; upscaling</li>
+          <li>Synthetic training data</li>
+          <li>OCR &amp; document capture</li>
+          <li>Defect and inspection vision</li>
+        </ul>
+      </div>
+
+      <div class="card uc">
+        <div class="uc-head"><span class="uc-mod">Speech</span><span class="badge live">Live today</span></div>
+        <ul class="uc-list">
+          <li>Voice agents and call triage</li>
+          <li>Transcription &amp; captioning</li>
+          <li>Meeting notes from audio</li>
+          <li>Audiobook &amp; e-learning narration</li>
+          <li>Accessibility read-aloud</li>
+          <li>Voice search</li>
+        </ul>
+      </div>
+
+      <div class="card uc accent">
+        <div class="uc-head"><span class="uc-mod">Video</span><span class="badge soon">Next</span></div>
+        <ul class="uc-list">
+          <li>Short-form video generation</li>
+          <li>Ad creative variants</li>
+          <li>Avatar &amp; presenter video</li>
+          <li>Video summarisation &amp; search</li>
+          <li>Dubbing and subtitling</li>
+          <li>Batch re-formatting for social</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="note">
+      Text runs on vLLM, images on Z-Image Turbo, speech on Qwen3-TTS — all three serving on real
+      nodes today through one OpenAI-compatible API. Video is the next modality: the 128 GB unified
+      memory holds the models, and generation is <b>batch work with no latency deadline</b> — the
+      single best fit for compute that is cheap at midday and idle overnight.
+    </p>
+  </div>
+</section>
+
+<section class="slide" id="s8" data-n="08 / 14" data-title="Who buys it">
   <div class="wrap stack">
     <div class="eyebrow">Demand</div>
     <h2 class="h">Who buys it, and how many of them.</h2>
@@ -151,16 +225,18 @@
   </svg>
     <div class="grid g-4" style="margin-top:clamp(6px,1.4vh,18px)">
       <div class="card stat accent">
-        <div class="n amber">A$6B</div>
-        <div class="l"><b>Government.</b> Annual Commonwealth ICT procurement. PROTECTED-classified
-          data is <b>legally required</b> to stay in certified onshore facilities.</div>
-        <div class="src">Hosting Certification Framework; DTA Cloud Policy, 1 Jul 2026</div>
+        <div class="n amber">A$16.4B</div>
+        <div class="l"><b>Universities &amp; research — our beachhead.</b> Higher-education R&amp;D
+          spend, up 17% in two years. No classification barrier, and the founders already work
+          inside it.</div>
+        <div class="src">ABS, 2024 release</div>
       </div>
       <div class="card stat">
-        <div class="n">A$16.4B</div>
-        <div class="l"><b>Universities.</b> Higher-education R&amp;D spend, up 17% in two years —
-          the buyers already closest to us.</div>
-        <div class="src">ABS, 2024 release</div>
+        <div class="n">A$6B</div>
+        <div class="l"><b>Government — gated, not open.</b> Annual Commonwealth ICT spend.
+          Sensitive and PROTECTED workloads need facilities built to PSPF zone specs, which a
+          home cannot meet. We target non-sensitive workloads until we can offer a certified enclave.</div>
+        <div class="src">DTA Hosting Certification Framework</div>
       </div>
       <div class="card stat">
         <div class="n">338,000</div>
@@ -178,7 +254,7 @@
   </div>
 </section>
 
-<section class="slide parchment" id="s8" data-n="08 / 13" data-title="Who hosts it">
+<section class="slide tinted" id="s9" data-n="09 / 14" data-title="Who hosts it">
   <div class="wrap stack">
     <div class="eyebrow">Supply</div>
     <h2 class="h">Four million roofs.<br>We need ten thousand.</h2>
@@ -202,7 +278,7 @@
   </div>
 </section>
 
-<section class="slide dark" id="s9" data-n="09 / 13" data-title="1,000 nodes">
+<section class="slide dark" id="s10" data-n="10 / 14" data-title="1,000 nodes">
   <div class="wrap stack">
     <div class="eyebrow">Fleet economics</div>
     <h2 class="h">Capital buys a 4× shorter<br>road to profitability.</h2>
@@ -229,10 +305,13 @@
       <div class="card stat"><div class="n">29%</div><div class="l">Return on the A$5.14M of capital deployed</div></div>
       <div class="card stat"><div class="n">A$4.45M</div><div class="l">Gross compute revenue through the network</div></div>
     </div>
+    <p class="note">700 units and 300 Spark-class nodes at the base case. Company operating cost
+      of A$1.4M/yr assumes ~9 FTE plus infrastructure and G&amp;A. Steady state — this chart does not
+      model the ramp to 1,000 nodes.</p>
   </div>
 </section>
 
-<section class="slide" id="s10" data-n="10 / 13" data-title="Why the margin holds">
+<section class="slide" id="s11" data-n="11 / 14" data-title="Why the margin holds">
   <div class="wrap stack">
     <div class="eyebrow">Why the margin holds</div>
     <h2 class="h">Free electricity isn't the moat.<br>The free building is.</h2>
@@ -260,7 +339,7 @@
   </div>
 </section>
 
-<section class="slide tinted" id="s11" data-n="11 / 13" data-title="Fact vs estimate">
+<section class="slide tinted" id="s12" data-n="12 / 14" data-title="Fact vs estimate">
   <div class="wrap stack">
     <div class="eyebrow">Diligence</div>
     <h2 class="h">What is verified, and what<br>we are still buying data on.</h2>
@@ -293,7 +372,7 @@
   </div>
 </section>
 
-<section class="slide dark" id="s12" data-n="12 / 13" data-title="Capital">
+<section class="slide dark" id="s13" data-n="13 / 14" data-title="Capital">
   <div class="wrap stack">
     <div class="eyebrow">Capital</div>
     <h2 class="h">A$2.4M is already committed.</h2>
@@ -325,7 +404,7 @@
   </div>
 </section>
 
-<section class="slide dense" id="s13" data-n="13 / 13" data-title="Appendix">
+<section class="slide dense" id="s14" data-n="14 / 14" data-title="Appendix">
   <div class="wrap stack">
     <div class="eyebrow">Appendix</div>
     <h2 class="h">The full model.</h2>

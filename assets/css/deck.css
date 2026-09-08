@@ -586,3 +586,28 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
 .slide.dense .stack > * + * { margin-top: clamp(8px, 1.2vh, 14px); }
 .chart .val-in { fill: #ffffff; font-weight: 800; }
 .dark .chart .val-in { fill: #1a1610; }
+
+/* ---------------- Use-case tiles ---------------- */
+.uc { display: flex; flex-direction: column; gap: 0; }
+.uc-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.uc-mod {
+  font-size: clamp(17px, 1.7vw, 23px); font-weight: 800; letter-spacing: -.02em; color: var(--ink);
+}
+.dark .uc-mod { color: var(--on-dark); }
+.badge {
+  font-family: "JetBrains Mono", monospace; font-size: 9.5px; font-weight: 600;
+  letter-spacing: .09em; text-transform: uppercase; padding: 4px 8px; border-radius: var(--r-pill);
+  white-space: nowrap; flex: none;
+}
+.badge.live { background: rgba(74,168,130,.16); color: #2f8a6b; }
+.dark .badge.live { background: rgba(93,184,166,.18); color: #6fc3b0; }
+.badge.soon { background: var(--surface-2); color: var(--muted); }
+.dark .badge.soon { background: #2a251d; color: var(--on-dark-muted); }
+.uc-list { list-style: none; }
+.uc-list li {
+  font-size: clamp(12px, 1.02vw, 14.5px); line-height: 1.35;
+  padding: clamp(5px, .8vh, 8px) 0;
+  border-top: 1px solid var(--line-soft); color: var(--body);
+}
+.dark .uc-list li { border-top-color: var(--line-dark); color: var(--on-dark-muted); }
+@media (max-height: 760px) { .uc-list li { padding: 3px 0; } .uc-head { margin-bottom: 8px; } }
