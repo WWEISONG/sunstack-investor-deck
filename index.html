@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/deck.css?v=e8c48d05">
+<link rel="stylesheet" href="assets/css/deck.css?v=9208190c">
 </head>
 <body>
 
@@ -311,31 +311,43 @@
   </div>
 </section>
 
-<section class="slide" id="s11" data-n="11 / 14" data-title="Why the margin holds">
+<section class="slide" id="s11" data-n="11 / 14" data-title="Cost stack">
   <div class="wrap stack">
     <div class="eyebrow">Why the margin holds</div>
-    <h2 class="h">Free electricity isn't the moat.<br>The free building is.</h2>
-    <svg class="chart short" viewBox="0 0 1160 168" role="img" aria-label="Memory bandwidth per A$1,000: 91 GB/s for the Ryzen mini PC versus 42 for DGX Spark.">
-    <text class="axname" x="0" y="18">Memory bandwidth per A$1,000 of hardware — GB/s</text>
-    <text class="lbl-b" x="0" y="65" style="font-size:14px">Ryzen AI Max+ 395 mini PC</text><text class="lbl" x="0" y="82" style="font-size:12px">256 GB/s · A$2,800</text><rect class="bar-bad" x="380" y="44" width="600.0" height="50" rx="4"/><text class="val" x="994.0" y="75" style="font-size:16px">91</text><text class="lbl-b" x="0" y="137" style="font-size:14px">NVIDIA DGX Spark</text><text class="lbl" x="0" y="154" style="font-size:12px">273 GB/s · A$6,500</text><rect class="bar-neutral" x="380" y="116" width="276.9" height="50" rx="4"/><text class="val" x="670.9" y="147" style="font-size:16px">42</text><text class="callout-t" x="1050" y="113" text-anchor="middle" style="font-size:20px">2.2×</text>
+    <h2 class="h">Four of our seven cost lines<br>are zero.</h2>
+
+    <svg class="chart tall" viewBox="0 0 1160 430" role="img" aria-label="Annual operating cost of one node: homeowner share A$1,011, maintenance A$400, electricity A$30, and zero for land, building and cooling, grid connection, and physical security. Total A$1,441 against A$4,044 revenue, a 64 percent gross margin.">
+    <text class="axname" x="0" y="20" style="font-size:13px">Annual operating cost of one node — base case</text>
+    <text class="lbl-b" x="0" y="70" style="font-size:16px">Homeowner revenue share</text><text class="lbl" x="0" y="86" style="font-size:12.5px">25% of gross revenue</text><rect class="bar-bad" x="400" y="58" width="560.0" height="30" rx="4"/><text class="val" x="974.0" y="79" style="font-size:16px">A$1,011</text><text class="lbl-b" x="0" y="117" style="font-size:16px">Node maintenance</text><text class="lbl" x="0" y="133" style="font-size:12.5px">support, spares, replacement</text><rect class="bar-bad" x="400" y="105" width="221.6" height="30" rx="4"/><text class="val" x="635.6" y="126" style="font-size:16px">A$400</text><text class="lbl-b" x="0" y="164" style="font-size:16px">Electricity</text><text class="lbl" x="0" y="180" style="font-size:12.5px">394 kWh, mostly surplus solar</text><rect class="bar-bad" x="400" y="152" width="16.6" height="30" rx="4"/><text class="val" x="430.6" y="173" style="font-size:16px">A$30</text><text class="lbl-b" x="0" y="220" style="font-size:16px">Land</text><line class="zeroline" x1="400" y1="214" x2="418" y2="214"/><text class="zeroval" x="432" y="220" style="font-size:18px">A$0</text><text class="lbl" x="500" y="219" style="font-size:13px">somebody else already paid for it</text><text class="lbl-b" x="0" y="267" style="font-size:16px">Building &amp; cooling</text><line class="zeroline" x1="400" y1="261" x2="418" y2="261"/><text class="zeroval" x="432" y="267" style="font-size:18px">A$0</text><text class="lbl" x="500" y="266" style="font-size:13px">somebody else already paid for it</text><text class="lbl-b" x="0" y="314" style="font-size:16px">Grid connection</text><line class="zeroline" x1="400" y1="308" x2="418" y2="308"/><text class="zeroval" x="432" y="314" style="font-size:18px">A$0</text><text class="lbl" x="500" y="313" style="font-size:13px">somebody else already paid for it</text><text class="lbl-b" x="0" y="361" style="font-size:16px">Physical security &amp; staff</text><line class="zeroline" x1="400" y1="355" x2="418" y2="355"/><text class="zeroval" x="432" y="361" style="font-size:18px">A$0</text><text class="lbl" x="500" y="360" style="font-size:13px">somebody else already paid for it</text>
+    <line class="ax" x1="0" y1="388" x2="960" y2="388"/>
+    <text class="lbl-b" x="0" y="415" style="font-size:17px">Total operating cost</text>
+    <text class="val" x="490" y="415" text-anchor="end" style="font-size:20px">A$1,441</text>
+    <text class="lbl" x="512" y="415" style="font-size:15px">against A$4,044 of revenue —</text>
+    <text class="callout-t" x="820" y="415" style="font-size:20px">a 64% gross margin</text>
   </svg>
-    <div class="grid g-2" style="margin-top:clamp(6px,1.4vh,18px)">
+
+    <div class="grid g-3" style="margin-top:clamp(6px,1.4vh,18px)">
       <div class="card">
-        <div class="k">A data centre pays for</div>
-        <p>Land and planning · building, cooling plant and water · a grid connection, often a
-          multi-year queue · physical security and redundancy · electricity at commercial rates,
-          all day.</p>
+        <div class="k">The building is the moat</div>
+        <p>A data centre must fund land, a planning fight, the shell, cooling plant, a grid
+          connection often years deep in a queue, and physical security. <b>We fund a box and an
+          install.</b> All four already exist in the home, and somebody else paid for them.</p>
+      </div>
+      <div class="card">
+        <div class="k">Electricity is the small one</div>
+        <p>Even the energy edge is modest: a data centre draws <b>1.52 kWh for every 1 kWh</b> of
+          compute once cooling is counted, at commercial rates. We pay <b>A$30 a year</b>. Real,
+          but not what makes the margin.</p>
+        <div class="src">Uptime Institute Global Data Center Survey, 2026</div>
       </div>
       <div class="card accent">
-        <div class="k">SunStack pays for</div>
-        <p>A A$2,800 box · a A$400 install · a revenue share to the homeowner · about
-          <b>A$30 a year of electricity</b>. The building, cooling, grid connection and security
-          already exist, and somebody else paid for all four.</p>
+        <div class="k">And we buy cheaper compute</div>
+        <p>A Ryzen AI Max+ 395 mini PC delivers <b>91 GB/s of memory bandwidth per A$1,000</b>
+          against <b>42</b> for a DGX Spark — <b>2.2× more</b> of the thing that actually limits
+          inference, per dollar spent.</p>
+        <div class="src">Published specifications and retail pricing</div>
       </div>
     </div>
-    <p class="note">Bandwidth per dollar matters because inference on these models is bound by
-      memory bandwidth, not raw compute. Specifications and street prices are published;
-      the comparison is arithmetic, not estimate.</p>
   </div>
 </section>
 

@@ -208,11 +208,11 @@ h3.h     { font-size: clamp(19px, 2.1vw, 27px); letter-spacing: -.018em; }
 .dark .stat .n.amber { color: var(--gold); }
 .stat .l { font-size: clamp(12px, 1vw, 14px); line-height: 1.42; color: var(--body); }
 .dark .stat .l { color: var(--on-dark-muted); }
-.stat .src {
+.card .src {
   margin-top: 10px; font-size: 10.5px; line-height: 1.4; color: var(--muted);
   font-family: "JetBrains Mono", monospace; letter-spacing: .01em;
 }
-.dark .stat .src { color: #8a8378; }
+.dark .card .src { color: #8a8378; }
 
 /* ---------------- Tables ---------------- */
 
@@ -611,3 +611,7 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
 }
 .dark .uc-list li { border-top-color: var(--line-dark); color: var(--on-dark-muted); }
 @media (max-height: 760px) { .uc-list li { padding: 3px 0; } .uc-head { margin-bottom: 8px; } }
+.chart .zeroline { stroke: #4aa882; stroke-width: 3; stroke-linecap: round; }
+.chart .zeroval { fill: #2f8a6b; font-weight: 800; }
+.dark .chart .zeroline { stroke: #6fc3b0; }
+.dark .chart .zeroval { fill: #6fc3b0; }
