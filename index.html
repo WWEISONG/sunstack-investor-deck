@@ -4,204 +4,74 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SunStack — The Economics</title>
-<meta name="description" content="SunStack economic model: revenue lines, unit economics, payback period, capital structure and fleet economics for solar-powered sovereign AI compute.">
+<meta name="description" content="SunStack economic model: what a node earns, payback, who buys, who hosts, and fleet economics for solar-powered sovereign AI compute.">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/deck.css?v=ff4c350d">
+<link rel="stylesheet" href="assets/css/deck.css?v=7cd6bdeb">
 </head>
 <body>
 
 <div id="progress"></div>
 <a class="skip" href="#s2">Skip to content</a>
 
-<!-- ═══════════ 01 · COVER ═══════════ -->
-<section class="slide dark" id="s1" data-n="01 / 17" data-title="Cover">
+<section class="slide dark" id="s1" data-n="01 / 13" data-title="Cover">
   <div class="wrap stack">
     <div class="eyebrow">SunStack AI &nbsp;·&nbsp; The economics &nbsp;·&nbsp; September 2026</div>
     <h1 class="display">What it costs.<br>What it earns.<br>When it pays back.</h1>
-    <p class="lede" style="max-width:54ch">
-      The economic model behind a national network of solar-powered AI compute nodes —
-      revenue lines, unit economics, capital structure and payback.
-    </p>
-
-    <div class="grid g-4" style="margin-top:clamp(18px,3vh,36px)">
-      <div class="card stat accent"><div class="n amber">1.5 yrs</div><div class="l">Payback per node, base case</div></div>
+    <div class="grid g-4" style="margin-top:clamp(18px,3vh,38px)">
+      <div class="card stat accent"><div class="n amber">1.5 yrs</div><div class="l">Payback per node</div></div>
       <div class="card stat"><div class="n">65%</div><div class="l">Annual return on node capital</div></div>
-      <div class="card stat"><div class="n">488</div><div class="l">Owned nodes to clear overhead</div></div>
-      <div class="card stat"><div class="n">A$2.4M</div><div class="l">Capital already committed</div></div>
+      <div class="card stat"><div class="n">488</div><div class="l">Nodes to clear all overhead</div></div>
+      <div class="card stat"><div class="n">0.55%</div><div class="l">Of eligible homes needed for 10,000 nodes</div></div>
     </div>
-
     <p class="note" style="margin-top:clamp(14px,2.4vh,28px)">
-      Companion to the SunStack product deck. Every figure is either third-party verified or
-      flagged as our own estimate — slide 15 separates the two.
+      Companion to the SunStack product deck. A$2.4M of capital is already committed.
+      Every figure is third-party verified or flagged as our estimate — slide 11 separates the two.
     </p>
   </div>
 </section>
 
-<!-- ═══════════ 02 · THE MODEL ═══════════ -->
-<section class="slide" id="s2" data-n="02 / 17" data-title="The model">
+<section class="slide" id="s2" data-n="02 / 13" data-title="The arbitrage">
   <div class="wrap stack">
-    <div class="eyebrow">The model</div>
-    <h2 class="h">Four revenue lines, one cost stack.</h2>
-
-    <div class="grid g-4" style="margin-top:clamp(8px,1.6vh,20px)">
-      <div class="card"><div class="k">Line 1 · recurring</div><h4>Sovereign inference</h4><p>Metered per million tokens. The core line, and the one everything else is sized against.</p></div>
-      <div class="card"><div class="k">Line 2 · contracted</div><h4>Private deployment</h4><p>Reserved capacity for government, health and enterprise. Priced on access, not tokens.</p></div>
-      <div class="card"><div class="k">Line 3 · one-off</div><h4>Hardware &amp; install</h4><p>Node sold or placed. Recycles capital and funds fleet growth without dilution.</p></div>
-      <div class="card"><div class="k">Line 4 · excluded</div><h4>Grid &amp; energy</h4><p>Absorbing midday surplus where it is made. Real, but in <b>none</b> of these numbers.</p></div>
-    </div>
-
-    <div class="formula" style="margin-top:clamp(12px,2.2vh,26px)">
-      <span class="lhs">Gross margin =</span>
-      <span class="t">inference</span> + <span class="t">deployment</span> + <span class="t">hardware</span>
-      − homeowner&nbsp;share − energy − node&nbsp;O&amp;M − platform − company&nbsp;operations
-    </div>
-
-    <p class="note">
-      The homeowner takes 20–30% of gross. Energy is near-free at the margin because the node
-      runs on surplus solar the household is otherwise paid 3–6¢ for. Those two facts are what
-      make the rest of this deck work.
-    </p>
+    <div class="eyebrow">The arbitrage</div>
+    <h2 class="h">The same kilowatt-hour,<br>priced three ways.</h2>
+    <svg class="chart tall" viewBox="0 0 1160 258" role="img" aria-label="One kilowatt-hour of surplus rooftop solar is worth 4 cents exported, 30 cents bought back, or A$10.27 converted to AI tokens — 257 times more.">
+    <text class="axname" x="0" y="20">What one kilowatt-hour of surplus rooftop solar is worth</text>
+    <text class="lbl-b" x="0" y="89" font-size="14">Exported to the grid</text><rect class="bar-neutral" x="330" y="58" width="3.0" height="52" rx="4"/><text class="val" x="347.0" y="90" font-size="14">A$0.04</text><text class="lbl-b" x="0" y="167" font-size="14">Bought back at night</text><rect class="bar-neutral" x="330" y="136" width="19.9" height="52" rx="4"/><text class="val" x="363.9" y="168" font-size="14">A$0.30</text><text class="lbl-b" x="0" y="245" font-size="14">Converted to AI tokens</text><rect class="bar-bad" x="330" y="214" width="680.0" height="52" rx="4"/><text class="val-in" x="992.0" y="247" text-anchor="end" font-size="19">A$10.27</text>
+    <text class="bignum" x="1082" y="228" text-anchor="middle">257×</text>
+    <text class="lbl" x="1082" y="250" text-anchor="middle" font-size="12">vs exporting it</text>
+  </svg>
+    <p class="lede">Australian households are paid <b>3–6¢</b> for midday solar they export, and pay
+      <b>30–40¢</b> to buy it back after dark. Run through a compute node instead, that same
+      energy produces <b>A$10.27</b> of inference. We are not competing for electrons — we are
+      repricing them.</p>
+    <p class="note">Export and retail rates: state regulators, 2026 — many retailers now offer 0¢
+      at midday. Token value derived from the base case: A$4,044 of revenue from 394 kWh a year.</p>
   </div>
 </section>
 
-<!-- ═══════════ 03 · PRICE ═══════════ -->
-<section class="slide dark" id="s3" data-n="03 / 17" data-title="What a token is worth">
-  <div class="wrap stack">
-    <div class="eyebrow">Revenue assumption 1 of 2 — price</div>
-    <h2 class="h">What a token is actually worth.</h2>
-    <p class="lede">Token prices have deflated hard. We benchmarked against the live market
-      instead of assuming a premium — and we price just above the global average, not far above it.</p>
-
-    <div class="bars" style="margin-top:clamp(10px,1.8vh,22px)">
-      <div class="row"><div class="lab">Qwen3.8 Flash <span style="color:#8a8378;font-weight:400">· output</span></div><div class="track"><div class="fill grey" style="width:22%"></div><div class="val">A$0.58</div></div></div>
-      <div class="row"><div class="lab">Llama 3.3 70B <span style="color:#8a8378;font-weight:400">· Groq / Together</span></div><div class="track"><div class="fill grey" style="width:48%"></div><div class="val">A$0.82–1.25</div></div></div>
-      <div class="row"><div class="lab">Global average <span style="color:#8a8378;font-weight:400">· Aug 2026</span></div><div class="track"><div class="fill soft" style="width:62%"></div><div class="val">A$1.61</div></div></div>
-      <div class="row"><div class="lab">MiniMax M2 <span style="color:#8a8378;font-weight:400">· output</span></div><div class="track"><div class="fill grey" style="width:63%"></div><div class="val">A$1.64</div></div></div>
-      <div class="row"><div class="lab"><b>SunStack blended</b> <span style="color:#8a8378;font-weight:400">· base case</span></div><div class="track"><div class="fill" style="width:73%"></div><div class="val">A$1.90</div></div></div>
-      <div class="row"><div class="lab">Frontier output <span style="color:#8a8378;font-weight:400">· GPT / Claude class</span></div><div class="track"><div class="fill grey" style="width:100%"></div><div class="val">A$21–104</div></div></div>
-    </div>
-
-    <div class="chips" style="margin-top:clamp(12px,2.2vh,26px)">
-      <span class="chip"><span class="dot"></span>Data residency is contractual, not preference — the alternative is an onshore data centre at a 30–60% premium</span>
-      <span class="chip"><span class="dot"></span>Part of revenue is contracted access, priced on availability</span>
-    </div>
-
-    <p class="note">
-      Converted at AUD/USD 0.722 (7 Sep 2026). <b>This replaces an earlier internal assumption of
-      A$10–12 per million tokens</b>, which we tested against published rates and rejected as
-      roughly eight times the market for the models this hardware serves.
-    </p>
-  </div>
-</section>
-
-<!-- ═══════════ 04 · THROUGHPUT ═══════════ -->
-<section class="slide" id="s4" data-n="04 / 17" data-title="Throughput">
-  <div class="wrap stack">
-    <div class="eyebrow">Revenue assumption 2 of 2 — throughput</div>
-    <h2 class="h">A serving node is not a laptop.</h2>
-    <p class="lede">Reviews benchmark these boxes one prompt at a time. A serving node runs
-      hundreds of streams at once and re-uses the same weights read for all of them.</p>
-
-    <div class="grid g-2" style="margin-top:clamp(10px,2vh,24px)">
-      <div class="card stat">
-        <div class="k">gpt-oss 120B · MXFP4</div>
-        <div class="n">33 <span style="color:var(--muted);font-size:.5em">→</span> 863<span style="color:var(--muted);font-size:.4em"> tok/s</span></div>
-        <div class="l">Single stream versus aggregate at 256 concurrent streams — a <b>26× gain</b> from batching alone.</div>
-        <div class="src">Dendro Logic concurrency benchmark, 2026</div>
-      </div>
-      <div class="card stat">
-        <div class="k">Nemotron Super 49B · NVFP4</div>
-        <div class="n">5.8 <span style="color:var(--muted);font-size:.5em">→</span> 695<span style="color:var(--muted);font-size:.4em"> tok/s</span></div>
-        <div class="l">Same box, same model, same session — <b>120× more throughput</b> once fed real concurrent demand.</div>
-        <div class="src">Dendro Logic concurrency benchmark, 2026</div>
-      </div>
-    </div>
-
-    <div class="card accent" style="margin-top:clamp(12px,2.2vh,26px)">
-      <p><b>We model 300 tok/s per unit</b> — about a third of benchmarked peak. Real fleets never
-        sit at peak concurrency, and ROCm is less mature than CUDA. Our earlier internal model
-        assumed 95 tok/s, which understated a batched serving node by roughly nine times.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ 05 · THE UNIT ═══════════ -->
-<section class="slide tinted" id="s5" data-n="05 / 17" data-title="Cost of a unit">
-  <div class="wrap stack">
-    <div class="eyebrow">Cost side</div>
-    <h2 class="h">Buying throughput at a third of the price.</h2>
-    <p class="lede">Inference on these models is bound by memory bandwidth, not raw compute — so
-      we buy bandwidth per dollar, and lead with the cheap unit rather than the famous one.</p>
-
-    <div class="tbl-wrap" style="margin-top:clamp(8px,1.6vh,20px)">
-    <table class="tbl">
-      <thead><tr><th>Hardware</th><th>Memory</th><th>Bandwidth</th><th>Street price</th><th class="hi">GB/s per A$1,000</th></tr></thead>
-      <tbody>
-        <tr class="hi"><td><b>Ryzen AI Max+ 395 mini PC</b> — our unit</td><td>128 GB</td><td>256 GB/s</td><td>~A$2,800</td><td class="hi"><b>91</b></td></tr>
-        <tr><td>NVIDIA DGX Spark — premium tier</td><td>128 GB</td><td>273 GB/s</td><td>~A$6,500</td><td class="hi">42</td></tr>
-      </tbody>
-    </table>
-    </div>
-
-    <div class="split" style="margin-top:clamp(12px,2.2vh,26px)">
-      <ul class="ticks">
-        <li><span class="m">01</span><b>94% of the bandwidth for 43% of the price</b> — a 2.2× better cost per token, from published specs.</li>
-        <li><span class="m">02</span><b>All-in A$4,000 per unit:</b> A$2,800 hardware, A$400 installation, A$800 allocated platform and deployment.</li>
-        <li><span class="m">03</span><b>No big-bang capex.</b> Capacity is added one unit at a time against signed demand. Nothing is stranded.</li>
-        <li><span class="m">04</span><b>Hardware-agnostic.</b> The node agent runs on CUDA, ROCm, CPU and Apple Silicon — we adopt the next accelerator without re-architecting.</li>
-      </ul>
-      <figure class="photo order-first">
-        <img src="assets/img/node-garage.jpg" alt="A sealed SunStack compute node mounted on a garage wall" loading="lazy">
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ 06 · UNIT ECONOMICS ═══════════ -->
-<section class="slide dark" id="s6" data-n="06 / 17" data-title="Unit economics">
+<section class="slide dark" id="s3" data-n="03 / 13" data-title="What a node earns">
   <div class="wrap stack">
     <div class="eyebrow">Unit economics</div>
-    <h2 class="h">One unit, three ways the world could go.</h2>
-
-    <div class="tbl-wrap">
-    <table class="tbl">
-      <thead>
-        <tr><th>Per company-owned unit, per year</th><th>Floor</th><th class="hi">Base case</th><th>Upside</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Aggregate throughput, batched</td><td>180 tok/s</td><td class="hi">300 tok/s</td><td>500 tok/s</td></tr>
-        <tr><td>Hours serving per day</td><td>8 h</td><td class="hi">9 h</td><td>10 h</td></tr>
-        <tr><td>Paid utilisation of those hours</td><td>45%</td><td class="hi">60%</td><td>70%</td></tr>
-        <tr><td>Blended sell price</td><td>A$1.30 / M</td><td class="hi">A$1.90 / M</td><td>A$2.60 / M</td></tr>
-        <tr><td>Tokens sold per year</td><td>851 M</td><td class="hi">2,129 M</td><td>4,599 M</td></tr>
-        <tr><td><b>Gross compute revenue</b></td><td>A$1,107</td><td class="hi">A$4,044</td><td>A$11,957</td></tr>
-        <tr><td class="dim">less homeowner share (30 / 25 / 20%)</td><td class="dim">(332)</td><td class="hi dim">(1,011)</td><td class="dim">(2,391)</td></tr>
-        <tr><td class="dim">less energy</td><td class="dim">(30)</td><td class="hi dim">(30)</td><td class="dim">(30)</td></tr>
-        <tr><td class="dim">less node maintenance</td><td class="dim">(400)</td><td class="hi dim">(400)</td><td class="dim">(400)</td></tr>
-        <tr class="total"><td>Net cash to SunStack</td><td>A$345</td><td class="hi">A$2,604</td><td>A$9,136</td></tr>
-        <tr class="total"><td>Payback on A$4,000 all-in</td><td>11.6 yrs</td><td class="hi">1.5 yrs</td><td>0.4 yrs</td></tr>
-        <tr class="total"><td>Annual return on capital</td><td>9%</td><td class="hi">65%</td><td>228%</td></tr>
-      </tbody>
-    </table>
+    <h2 class="h">One node earns A$2,604 a year.</h2>
+    <svg class="chart tall" viewBox="0 0 1160 270" role="img" aria-label="Waterfall: A$4,044 gross revenue per unit less homeowner share, energy and maintenance leaves A$2,604 net cash.">
+    <line class="gridline" x1="104" y1="206.0" x2="1120" y2="206.0"/><text class="tick" x="93" y="210.0" text-anchor="end">A$0k</text><line class="gridline" x1="104" y1="166.9" x2="1120" y2="166.9"/><text class="tick" x="93" y="170.9" text-anchor="end">A$1k</text><line class="gridline" x1="104" y1="127.8" x2="1120" y2="127.8"/><text class="tick" x="93" y="131.8" text-anchor="end">A$2k</text><line class="gridline" x1="104" y1="88.7" x2="1120" y2="88.7"/><text class="tick" x="93" y="92.7" text-anchor="end">A$3k</text><line class="gridline" x1="104" y1="49.6" x2="1120" y2="49.6"/><text class="tick" x="93" y="53.6" text-anchor="end">A$4k</text><text class="axname" x="104" y="18">Per company-owned unit, per year — base case</text>
+    <rect class="bar-bad" x="152.8" y="47.9" width="105.7" height="158.1" rx="3"/><text class="val" x="205.6" y="38.9" text-anchor="middle" font-size="13.5">A$4,044</text><text class="lbl" x="205.6" y="227" text-anchor="middle" font-size="12.5">Gross revenue</text><line class="connector" x1="258.4" y1="47.9" x2="356.0" y2="47.9"/><rect class="bar-neutral" x="356.0" y="47.9" width="105.7" height="39.5" rx="3"/><text class="val" x="408.8" y="38.9" text-anchor="middle" font-size="13.5">−A$1,011</text><text class="lbl" x="408.8" y="227" text-anchor="middle" font-size="12.5">Homeowner 25%</text><line class="connector" x1="461.6" y1="87.4" x2="559.2" y2="87.4"/><rect class="bar-neutral" x="559.2" y="87.4" width="105.7" height="2.0" rx="3"/><text class="val" x="612.0" y="78.4" text-anchor="middle" font-size="13.5">−A$30</text><text class="lbl" x="612.0" y="227" text-anchor="middle" font-size="12.5">Energy</text><line class="connector" x1="664.8" y1="88.6" x2="762.4" y2="88.6"/><rect class="bar-neutral" x="762.4" y="88.6" width="105.7" height="15.6" rx="3"/><text class="val" x="815.2" y="79.6" text-anchor="middle" font-size="13.5">−A$400</text><text class="lbl" x="815.2" y="227" text-anchor="middle" font-size="12.5">Node O&M</text><line class="connector" x1="868.0" y1="104.2" x2="965.6" y2="104.2"/><rect class="bar-bad" x="965.6" y="104.2" width="105.7" height="101.8" rx="3"/><text class="val" x="1018.4" y="95.2" text-anchor="middle" font-size="13.5">A$2,604</text><text class="lbl" x="1018.4" y="227" text-anchor="middle" font-size="12.5">Net cash</text><line class="ax" x1="104" y1="34" x2="104" y2="206"/>
+  </svg>
+    <div class="grid g-3" style="margin-top:clamp(6px,1.2vh,16px)">
+      <div class="card stat accent"><div class="n amber">A$4,000</div><div class="l">All-in cost — A$2,800 hardware, A$400 install, A$800 allocated platform</div></div>
+      <div class="card stat"><div class="n">A$2,604</div><div class="l">Net cash to SunStack each year, after the homeowner's 25%</div></div>
+      <div class="card stat"><div class="n">65%</div><div class="l">Annual return on the capital deployed per node</div></div>
     </div>
-
-    <p class="note">
-      Energy: 120 W average over 9 h/day = 394 kWh/yr, ~90% surplus solar at a 5¢ opportunity cost
-      and ~10% grid at 30¢. The floor case deliberately stacks three pessimistic assumptions at
-      once — a stress test, not a forecast. Company overhead is carried at fleet level (slide 10).
-    </p>
   </div>
 </section>
 
-<!-- ═══════════ 07 · PAYBACK ═══════════ -->
-<section class="slide" id="s7" data-n="07 / 17" data-title="Payback">
+<section class="slide" id="s4" data-n="04 / 13" data-title="Payback">
   <div class="wrap stack">
     <div class="eyebrow">Payback</div>
-    <h2 class="h">A unit pays for itself in 18 months.</h2>
-
-    <svg class="chart" viewBox="0 0 1160 272" role="img" aria-label="Cumulative cash per company-owned unit over five years; the base case breaks even at 1.5 years.">
+    <h2 class="h">It pays for itself in 18 months.</h2>
+    <svg class="chart tall" viewBox="0 0 1160 272" role="img" aria-label="Cumulative cash per company-owned unit over five years; the base case breaks even at 1.5 years.">
     <line class="gridline" x1="96" y1="214.0" x2="1108" y2="214.0"/><text class="tick" x="85" y="218.0" text-anchor="end">−A$6k</text><line class="zero" x1="96" y1="191.2" x2="1108" y2="191.2"/><text class="tick" x="85" y="195.2" text-anchor="end">A$0</text><line class="gridline" x1="96" y1="153.3" x2="1108" y2="153.3"/><text class="tick" x="85" y="157.3" text-anchor="end">+A$10k</text><line class="gridline" x1="96" y1="115.4" x2="1108" y2="115.4"/><text class="tick" x="85" y="119.4" text-anchor="end">+A$20k</text><line class="gridline" x1="96" y1="77.5" x2="1108" y2="77.5"/><text class="tick" x="85" y="81.5" text-anchor="end">+A$30k</text><line class="gridline" x1="96" y1="39.6" x2="1108" y2="39.6"/><text class="tick" x="85" y="43.6" text-anchor="end">+A$40k</text><line class="gridline" x1="96.0" y1="32" x2="96.0" y2="214" opacity=".5"/><text class="tick" x="96.0" y="236" text-anchor="middle">0 yr</text><line class="gridline" x1="298.4" y1="32" x2="298.4" y2="214" opacity=".5"/><text class="tick" x="298.4" y="236" text-anchor="middle">1 yr</text><line class="gridline" x1="500.8" y1="32" x2="500.8" y2="214" opacity=".5"/><text class="tick" x="500.8" y="236" text-anchor="middle">2 yr</text><line class="gridline" x1="703.2" y1="32" x2="703.2" y2="214" opacity=".5"/><text class="tick" x="703.2" y="236" text-anchor="middle">3 yr</text><line class="gridline" x1="905.6" y1="32" x2="905.6" y2="214" opacity=".5"/><text class="tick" x="905.6" y="236" text-anchor="middle">4 yr</text><line class="gridline" x1="1108.0" y1="32" x2="1108.0" y2="214" opacity=".5"/><text class="tick" x="1108.0" y="236" text-anchor="middle">5 yr</text><path class="band" d="M 96.0 206.4 L 1108.0 33.2 L 1108.0 199.9 Z"/>
     <path class="ln edge" d="M 96.0 206.4 L 1108.0 33.2"/><path class="ln edge" d="M 96.0 206.4 L 1108.0 199.9"/>
     <path class="ln base" d="M 96.0 206.4 L 1108.0 157.0"/>
@@ -214,451 +84,312 @@
     <text class="lbl" x="1102.0" y="219.9" text-anchor="end">Floor · −A$2.3k</text>
     <text class="axname" x="96" y="16">Cumulative cash per unit</text>
   </svg>
-
-    <div class="legend" style="margin-top:4px">
+    <div class="legend">
       <span><i></i> Base case — A$2,604 net cash a year</span>
       <span><i class="sw"></i> Floor to upside range</span>
-      <span style="color:var(--muted)">Starting position: −A$4,000, the all-in cost of one unit</span>
-    </div>
-
-    <div class="formula" style="margin-top:clamp(8px,1.6vh,18px);font-size:clamp(10px,1vw,13px)">
-      <span class="lhs">Payback =</span>
-      <span class="fr">
-        <div class="num"><span class="t">C</span><span class="sub">hardware</span> + <span class="t">C</span><span class="sub">installation</span> + <span class="t">C</span><span class="sub">platform&nbsp;build</span></div>
-        <div class="den"><span class="t">R</span><span class="sub">tokens</span> + <span class="t">R</span><span class="sub">grid</span> − C<span class="sub">energy</span> − C<span class="sub">homeowner</span> − C<span class="sub">maintenance</span> − C<span class="sub">network</span> − C<span class="sub">company&nbsp;ops</span></div>
-      </span>
+      <span style="color:var(--muted)">Starts at −A$4,000, the all-in cost of one unit</span>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ 08 · SENSITIVITY ═══════════ -->
-<section class="slide dark" id="s8" data-n="08 / 17" data-title="What moves it">
+<section class="slide tinted" id="s5" data-n="05 / 13" data-title="The two assumptions">
+  <div class="wrap stack">
+    <div class="eyebrow">The two numbers everything rests on</div>
+    <h2 class="h">Both benchmarked, neither guessed.</h2>
+
+    <div class="bars">
+      <div class="row"><div class="lab">Qwen3.8 Flash <span style="color:var(--muted);font-weight:400">· output</span></div><div class="track"><div class="fill grey" style="width:22%"></div><div class="val">A$0.58</div></div></div>
+      <div class="row"><div class="lab">Llama 3.3 70B <span style="color:var(--muted);font-weight:400">· Groq / Together</span></div><div class="track"><div class="fill grey" style="width:48%"></div><div class="val">A$0.82–1.25</div></div></div>
+      <div class="row"><div class="lab">Global average <span style="color:var(--muted);font-weight:400">· Aug 2026</span></div><div class="track"><div class="fill soft" style="width:62%"></div><div class="val">A$1.61</div></div></div>
+      <div class="row"><div class="lab"><b>SunStack blended</b> <span style="color:var(--muted);font-weight:400">· what we model</span></div><div class="track"><div class="fill" style="width:73%"></div><div class="val">A$1.90</div></div></div>
+      <div class="row"><div class="lab">Frontier output <span style="color:var(--muted);font-weight:400">· GPT / Claude class</span></div><div class="track"><div class="fill grey" style="width:100%"></div><div class="val">A$21–104</div></div></div>
+    </div>
+
+    <div class="grid g-3" style="margin-top:clamp(8px,1.6vh,20px)">
+      <div class="card stat"><div class="n">33 → 863</div><div class="l"><b>Throughput, gpt-oss 120B.</b> Single stream vs 256 concurrent, same box. A serving node is never single-stream.</div><div class="src">Dendro Logic benchmark, 2026</div></div>
+      <div class="card stat"><div class="n">5.8 → 695</div><div class="l"><b>Throughput, Nemotron 49B.</b> A 120× gain from batching alone.</div><div class="src">Dendro Logic benchmark, 2026</div></div>
+      <div class="card stat accent"><div class="n amber">300 tok/s</div><div class="l"><b>What we model</b> — about a third of benchmarked peak, because real fleets never sit at peak concurrency.</div></div>
+    </div>
+
+    <p class="note">Prices converted at AUD/USD 0.722 (7 Sep 2026) from published Groq, Fireworks,
+      Together, DeepInfra and MiniMax rates. Both figures replace earlier internal assumptions —
+      95 tok/s and A$10–12 per million tokens — that we tested and rejected.</p>
+  </div>
+</section>
+
+<section class="slide dark" id="s6" data-n="06 / 13" data-title="What moves it">
   <div class="wrap stack">
     <div class="eyebrow">Sensitivity</div>
-    <h2 class="h">What actually moves the payback.</h2>
-    <p class="lede">Each bar spans the full range we consider plausible for that variable, holding
-      everything else at the base case.</p>
-
-    <svg class="chart" viewBox="0 0 1160 312" role="img" aria-label="Tornado chart of payback sensitivity; throughput and sell price dominate.">
+    <h2 class="h">Even the worst case pays back<br>in two and a half years.</h2>
+    <svg class="chart tall" viewBox="0 0 1160 312" role="img" aria-label="Tornado chart of payback sensitivity; throughput and sell price dominate.">
     <line class="gridline" x1="393.3" y1="40" x2="393.3" y2="280"/><text class="tick" x="393.3" y="298" text-anchor="middle">1.0 yr</text><line class="gridline" x1="604.4" y1="40" x2="604.4" y2="280"/><text class="tick" x="604.4" y="298" text-anchor="middle">1.5 yr</text><line class="gridline" x1="815.6" y1="40" x2="815.6" y2="280"/><text class="tick" x="815.6" y="298" text-anchor="middle">2.0 yr</text><line class="gridline" x1="1026.7" y1="40" x2="1026.7" y2="280"/><text class="tick" x="1026.7" y="298" text-anchor="middle">2.5 yr</text><text class="axname" x="0" y="18">Payback in years — each bar spans the full range of that variable</text>
     <text class="lbl-b" x="0" y="66">Throughput</text><text class="lbl" x="0" y="81" font-size="11.5">200 → 450 tok/s</text><rect class="bar-good" x="380.7" y="52" width="240.7" height="32" rx="3"/><rect class="bar-bad" x="621.3" y="52" width="409.6" height="32" rx="3"/><text class="val" x="371.7" y="73" text-anchor="end" font-size="12">0.97</text><text class="val" x="1039.9" y="73" text-anchor="start" font-size="12">2.51</text><text class="lbl-b" x="0" y="113">Sell price</text><text class="lbl" x="0" y="128" font-size="11.5">A$1.30 → A$2.50 / M</text><rect class="bar-good" x="444.0" y="99" width="177.3" height="32" rx="3"/><rect class="bar-bad" x="621.3" y="99" width="375.8" height="32" rx="3"/><text class="val" x="435.0" y="120" text-anchor="end" font-size="12">1.12</text><text class="val" x="1006.1" y="120" text-anchor="start" font-size="12">2.43</text><text class="lbl-b" x="0" y="160">Paid utilisation</text><text class="lbl" x="0" y="175" font-size="11.5">45% → 70%</text><rect class="bar-good" x="515.8" y="146" width="105.6" height="32" rx="3"/><rect class="bar-bad" x="621.3" y="146" width="266.0" height="32" rx="3"/><text class="val" x="506.8" y="167" text-anchor="end" font-size="12">1.29</text><text class="val" x="896.3" y="167" text-anchor="start" font-size="12">2.17</text><text class="lbl-b" x="0" y="207">Hardware cost</text><text class="lbl" x="0" y="222" font-size="11.5">A$3,600 → A$2,000</text><rect class="bar-good" x="490.4" y="193" width="130.9" height="32" rx="3"/><rect class="bar-bad" x="621.3" y="193" width="126.7" height="32" rx="3"/><text class="val" x="481.4" y="214" text-anchor="end" font-size="12">1.23</text><text class="val" x="757.0" y="214" text-anchor="start" font-size="12">1.84</text><text class="lbl-b" x="0" y="254">Homeowner share</text><text class="lbl" x="0" y="269" font-size="11.5">30% → 20%</text><rect class="bar-good" x="574.9" y="240" width="46.4" height="32" rx="3"/><rect class="bar-bad" x="621.3" y="240" width="54.9" height="32" rx="3"/><text class="val" x="565.9" y="261" text-anchor="end" font-size="12">1.43</text><text class="val" x="685.2" y="261" text-anchor="start" font-size="12">1.67</text><line class="bar-base" x1="621.3" y1="40" x2="621.3" y2="280"/>
     <text class="callout-t" x="621.3" y="33" text-anchor="middle">Base 1.54 yr</text>
   </svg>
-
-    <div class="legend" style="margin-top:6px">
+    <div class="legend">
       <span><i style="background:#4aa882"></i> Faster payback</span>
       <span><i></i> Slower payback</span>
+      <span style="color:var(--muted)">Each bar spans that variable's full plausible range</span>
     </div>
-
-    <p class="lede" style="margin-top:clamp(8px,1.6vh,18px)">
-      <b>Throughput and price dominate; the homeowner's cut barely registers.</b> Both leaders are
-      demand problems, not technology problems — and the worst single case still pays back in
-      two and a half years.
-    </p>
   </div>
 </section>
 
-<!-- ═══════════ 09 · CAPITAL STRUCTURE ═══════════ -->
-<section class="slide tinted" id="s9" data-n="09 / 17" data-title="Own or sell">
+<section class="slide" id="s7" data-n="07 / 13" data-title="Who buys it">
   <div class="wrap stack">
-    <div class="eyebrow">Capital structure</div>
-    <h2 class="h">Own the node, or sell it.</h2>
-    <p class="lede">Every node sits on our balance sheet or the customer's. The choice sets the
-      shape of the whole business — and we control the mix.</p>
-
-    <div class="grid g-2" style="margin-top:clamp(10px,2vh,24px)">
-      <div class="card accent stack-sm">
-        <div class="k">Structure A · company-owned</div>
-        <p>We buy and place the unit. The homeowner pays nothing and takes a revenue share.</p>
-        <table class="tbl" style="margin-top:8px"><tbody>
-          <tr><td>Capital per node</td><td><b>A$4,000</b></td></tr>
-          <tr><td>Net cash per year</td><td><b>A$2,604</b></td></tr>
-          <tr><td>Payback</td><td><b>1.5 yrs</b></td></tr>
-          <tr class="total"><td>Return on capital</td><td><b>65%</b></td></tr>
-        </tbody></table>
+    <div class="eyebrow">Demand</div>
+    <h2 class="h">Who buys it, and how many of them.</h2>
+    <svg class="chart short" viewBox="0 0 1160 224" role="img" aria-label="Australian AI infrastructure spend is A$946M in 2026, up 128 percent; 1,000 nodes is 0.5 percent of it and 10,000 nodes 4.7 percent.">
+    <text class="axname" x="104" y="20">Australian spend on AI-optimised infrastructure</text>
+    <text class="lbl" x="104" y="44" font-size="13">A$414M in 2025 → <tspan class="val" font-size="15">A$946M in 2026</tspan> · +128% year on year</text>
+    <rect class="bar-neutral" x="104" y="110" width="1008" height="56" rx="4"/>
+    <rect class="bar-bad" x="104" y="110" width="47.4" height="56" rx="4"/>
+    <text class="val" x="1096" y="144.0" text-anchor="end" font-size="16">A$946M total market</text>
+    <line class="lead" x1="127.7" y1="106" x2="127.7" y2="88"/>
+    <text class="callout-t" x="135.7" y="82" text-anchor="start" font-size="13">10,000 nodes · A$44.5M · 4.7% of the market</text>
+    <line class="lead" x1="106.4" y1="170" x2="106.4" y2="188"/>
+    <text class="lbl" x="114.4" y="200" text-anchor="start" font-size="12.5">1,000 nodes · A$4.45M · 0.5%</text>
+  </svg>
+    <div class="grid g-4" style="margin-top:clamp(6px,1.4vh,18px)">
+      <div class="card stat accent">
+        <div class="n amber">A$6B</div>
+        <div class="l"><b>Government.</b> Annual Commonwealth ICT procurement. PROTECTED-classified
+          data is <b>legally required</b> to stay in certified onshore facilities.</div>
+        <div class="src">Hosting Certification Framework; DTA Cloud Policy, 1 Jul 2026</div>
       </div>
-
-      <div class="card stack-sm">
-        <div class="k">Structure B · customer-owned</div>
-        <p>The customer buys the unit for A$3,900 installed and owns it. We take a platform share.</p>
-        <table class="tbl" style="margin-top:8px"><tbody>
-          <tr><td>Capital per node</td><td><b>A$0</b></td></tr>
-          <tr><td>Net cash per year</td><td><b>A$723</b></td></tr>
-          <tr><td>One-off hardware margin</td><td><b>A$700</b></td></tr>
-          <tr class="total"><td>Return on capital</td><td><b>∞</b></td></tr>
-        </tbody></table>
+      <div class="card stat">
+        <div class="n">A$16.4B</div>
+        <div class="l"><b>Universities.</b> Higher-education R&amp;D spend, up 17% in two years —
+          the buyers already closest to us.</div>
+        <div class="src">ABS, 2024 release</div>
+      </div>
+      <div class="card stat">
+        <div class="n">338,000</div>
+        <div class="l"><b>Business.</b> Australian businesses already using AI — 12% of
+          2.81 million actively trading.</div>
+        <div class="src">ABS, June 2026</div>
+      </div>
+      <div class="card stat">
+        <div class="n">+128%</div>
+        <div class="l"><b>Growth.</b> Year-on-year rise in Australian AI-infrastructure spend.
+          The market is not the constraint.</div>
+        <div class="src">IDC Australia, 2026</div>
       </div>
     </div>
-
-    <p class="note">
-      Structure B: SunStack takes 20% of the distributable pool — gross revenue less energy and
-      node maintenance — being A$3,614 × 20% = A$723. A third structure, onboarding a household's
-      existing gaming GPU for a A$500 fee plus the same 20% share, needs no capital at all.
-    </p>
   </div>
 </section>
 
-<!-- ═══════════ 09 · FLEET ═══════════ -->
-<section class="slide dark" id="s10" data-n="10 / 17" data-title="1,000 nodes">
+<section class="slide parchment" id="s8" data-n="08 / 13" data-title="Who hosts it">
+  <div class="wrap stack">
+    <div class="eyebrow">Supply</div>
+    <h2 class="h">Four million roofs.<br>We need ten thousand.</h2>
+
+    <div class="bars">
+      <div class="row"><div class="lab">Homes with rooftop solar</div><div class="track"><div class="fill" style="width:100%"></div><div class="val">4.3M</div></div></div>
+      <div class="row"><div class="lab">Owner-occupied <span style="color:var(--muted);font-weight:400">· can authorise hardware</span></div><div class="track"><div class="fill" style="width:79%"></div><div class="val">3.4M</div></div></div>
+      <div class="row"><div class="lab">In serviceable areas <span style="color:var(--muted);font-weight:400">· reliable broadband</span></div><div class="track"><div class="fill soft" style="width:56%"></div><div class="val">2.4M</div></div></div>
+      <div class="row"><div class="lab"><b>Physically suitable</b> <span style="color:var(--muted);font-weight:400">· space + switchboard</span></div><div class="track"><div class="fill soft" style="width:42%"></div><div class="val">1.8M</div></div></div>
+    </div>
+
+    <div class="grid g-3" style="margin-top:clamp(8px,1.6vh,22px)">
+      <div class="card stat accent"><div class="n amber">0.55%</div><div class="l">Of the eligible pool is all we need for <b>10,000 nodes</b> — and 0.06% for 1,000.</div></div>
+      <div class="card stat"><div class="n">100,000+</div><div class="l"><b>Already proven.</b> Origin's VPP alone has this many connected household services. We need a tenth of one incumbent's book.</div><div class="src">Origin Energy / IEEFA, 2026</div></div>
+      <div class="card stat"><div class="n">0.01%</div><div class="l"><b>Energy is not the constraint.</b> 10,000 nodes would draw this share of the ~40 TWh Australia's 28.3 GW rooftop fleet makes each year.</div><div class="src">AEMO / industry data, 2026</div></div>
+    </div>
+
+    <p class="note">Funnel filters are our estimates: 80% owner-occupied, 70% in serviceable areas,
+      75% physically suitable. A node draws ~1.1 kWh a day — about 4% of a typical 6.6 kW system's
+      output — so generation screens out almost no one.</p>
+  </div>
+</section>
+
+<section class="slide dark" id="s9" data-n="09 / 13" data-title="1,000 nodes">
   <div class="wrap stack">
     <div class="eyebrow">Fleet economics</div>
-    <h2 class="h">1,000 nodes.</h2>
-    <p class="lede">700 units and 300 Spark-class nodes carry <b>A$4.45M</b> of gross compute
-      revenue a year. How much we keep depends on how much capital sits behind it.</p>
-
-    <div class="tbl-wrap" style="margin-top:clamp(8px,1.6vh,18px)">
-    <table class="tbl">
-      <thead>
-        <tr><th>1,000-node fleet · base case · steady state</th><th class="hi">All owned</th><th>50 / 50</th><th>All sold</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Gross compute revenue through the network</td><td class="hi">A$4.45M</td><td>A$4.45M</td><td>A$4.45M</td></tr>
-        <tr><td>SunStack node contribution</td><td class="hi">A$2.87M</td><td>A$1.83M</td><td>A$0.79M</td></tr>
-        <tr><td class="dim">less company operating cost</td><td class="hi dim">(1.40M)</td><td class="dim">(1.40M)</td><td class="dim">(1.40M)</td></tr>
-        <tr class="total"><td>Operating cash per year</td><td class="hi">A$1.47M</td><td>A$0.43M</td><td>(A$0.60M)</td></tr>
-        <tr><td>SunStack capital deployed</td><td class="hi">A$5.14M</td><td>A$2.57M</td><td>A$0</td></tr>
-        <tr class="total"><td>Return on deployed capital</td><td class="hi">29%</td><td>17%</td><td>n/a</td></tr>
-        <tr class="total"><td>Payback on the whole fleet</td><td class="hi">3.5 yrs</td><td>6.0 yrs</td><td>never</td></tr>
-      </tbody>
-    </table>
-    </div>
-
-    <svg class="chart compact" viewBox="0 0 1160 218" role="img" aria-label="Operating cash versus fleet size; company-owned nodes break even at 488, customer-owned at 1,937.">
+    <h2 class="h">Capital buys a 4× shorter<br>road to profitability.</h2>
+    <svg class="chart tall" viewBox="0 0 1160 218" role="img" aria-label="Operating cash versus fleet size; company-owned nodes break even at 488, customer-owned at 1,937.">
     <line class="gridline" x1="108" y1="163.0" x2="1108" y2="163.0"/><text class="tick" x="97" y="167.0" text-anchor="end">−A$1M</text><line class="zero" x1="108" y1="138.0" x2="1108" y2="138.0"/><text class="tick" x="97" y="142.0" text-anchor="end">A$0</text><line class="gridline" x1="108" y1="88.0" x2="1108" y2="88.0"/><text class="tick" x="97" y="92.0" text-anchor="end">A$2M</text><line class="gridline" x1="108" y1="38.0" x2="1108" y2="38.0"/><text class="tick" x="97" y="42.0" text-anchor="end">A$4M</text><line class="gridline" x1="108.0" y1="28" x2="108.0" y2="178" opacity=".5"/><text class="tick" x="108.0" y="199" text-anchor="middle">0</text><line class="gridline" x1="358.0" y1="28" x2="358.0" y2="178" opacity=".5"/><text class="tick" x="358.0" y="199" text-anchor="middle">500</text><line class="gridline" x1="608.0" y1="28" x2="608.0" y2="178" opacity=".5"/><text class="tick" x="608.0" y="199" text-anchor="middle">1,000</text><line class="gridline" x1="858.0" y1="28" x2="858.0" y2="178" opacity=".5"/><text class="tick" x="858.0" y="199" text-anchor="middle">1,500</text><line class="gridline" x1="1108.0" y1="28" x2="1108.0" y2="178" opacity=".5"/><text class="tick" x="1108.0" y="199" text-anchor="middle">2,000</text><path class="ln alt" d="M 108.0 173.0 L 1108.0 136.8"/><path class="ln base" d="M 108.0 173.0 L 1108.0 29.4"/>
     <line class="ax" x1="108" y1="28" x2="108" y2="178"/>
     <circle class="dot" cx="351.7" cy="138.0" r="6"/>
     <circle class="dot alt" cx="1076.2" cy="138.0" r="6"/>
     <rect class="callout" x="301.7" y="96.0" width="112" height="27" rx="7"/>
     <text class="callout-t" x="357.7" y="115.0" text-anchor="middle">488 owned</text>
-    <text class="lbl" x="1066.2" y="160.0" text-anchor="end">1,937 sold</text>
+    <text class="lbl" x="1076.2" y="160.0" text-anchor="end">1,937 sold</text>
     <text class="val" x="1102.0" y="19.4" text-anchor="end">Company-owned</text>
     
     <text class="axname" x="108" y="16">Operating cash per year</text>
     <text class="axname" x="1108" y="216" text-anchor="end">Nodes in the fleet</text>
   </svg>
-
-    <div class="legend" style="margin-top:2px">
+    <div class="legend">
       <span><i></i> Company-owned — A$2,604 per node</span>
       <span><i class="alt"></i> Customer-owned — A$723 per node</span>
       <span style="color:var(--muted)">Both carry the same A$1.4M of company overhead</span>
     </div>
-
-    <p class="note">
-      Company operating cost of A$1.4M/yr assumes roughly 9 FTE plus cloud infrastructure and G&amp;A.
-    </p>
-  </div>
-</section>
-
-<!-- ═══════════ 10 · BEYOND TOKENS ═══════════ -->
-<section class="slide parchment" id="s11" data-n="11 / 17" data-title="Beyond tokens">
-  <div class="wrap stack">
-    <div class="eyebrow">Revenue beyond inference</div>
-    <h2 class="h">Every home is worth more<br>than its tokens.</h2>
-
-    <div class="grid g-4" style="margin-top:clamp(10px,2vh,24px)">
-      <div class="card stat">
-        <div class="n amber">A$507</div>
-        <div class="l"><b>Existing-hardware onboarding.</b> Households that already own a gaming
-          GPU: a A$500 install fee plus 20% of the pool, with <b>no capital at all</b>.
-          First-year contribution per household.</div>
-      </div>
-      <div class="card stat">
-        <div class="n amber">A$290</div>
-        <div class="l"><b>Energy management subscription.</b> A$600 setup plus A$240/yr on a
-          customer relationship we already have. First-year contribution per household.</div>
-      </div>
-      <div class="card stat">
-        <div class="n amber">A$2,400</div>
-        <div class="l"><b>Education deployments.</b> Per device per year from schools and
-          universities, with teaching capacity reserved and spare cycles sold to the network.</div>
-      </div>
-      <div class="card stat">
-        <div class="n amber">A$10K</div>
-        <div class="l"><b>Private &amp; enterprise deployment.</b> Contribution per sovereign
-          deployment on a A$20K average contract. Highest margin, longest sales cycle.</div>
-      </div>
-    </div>
-
-    <div class="grid g-2" style="margin-top:clamp(12px,2.2vh,26px)">
-      <div class="card">
-        <div class="k">Why they matter</div>
-        <p>Three of the four need little or no capital and reach households we are already
-          visiting. They carry company overhead while the owned fleet is still being built.</p>
-      </div>
-      <div class="card">
-        <div class="k">The line we excluded</div>
-        <p><b>Grid and VPP services.</b> Real revenue, already licensed by the market — and in
-          none of the numbers here. We will forecast it after a retailer trial, not before.</p>
-      </div>
+    <div class="grid g-3" style="margin-top:clamp(6px,1.2vh,16px)">
+      <div class="card stat accent"><div class="n amber">A$1.47M</div><div class="l">Operating cash a year at 1,000 owned nodes</div></div>
+      <div class="card stat"><div class="n">29%</div><div class="l">Return on the A$5.14M of capital deployed</div></div>
+      <div class="card stat"><div class="n">A$4.45M</div><div class="l">Gross compute revenue through the network</div></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ 11 · COST FLOOR ═══════════ -->
-<section class="slide" id="s12" data-n="12 / 17" data-title="Cost floor">
+<section class="slide" id="s10" data-n="10 / 13" data-title="Why the margin holds">
   <div class="wrap stack">
     <div class="eyebrow">Why the margin holds</div>
     <h2 class="h">Free electricity isn't the moat.<br>The free building is.</h2>
-    <p class="lede">Energy is roughly a fifth of the cost of inference. If cheap power were the
-      whole story we would have a 20% edge and a hard fight. The advantage is everything a data
-      centre must build that we simply don't.</p>
-
-    <div class="grid g-2" style="margin-top:clamp(10px,2vh,24px)">
+    <svg class="chart short" viewBox="0 0 1160 168" role="img" aria-label="Memory bandwidth per A$1,000: 91 GB/s for the Ryzen mini PC versus 42 for DGX Spark.">
+    <text class="axname" x="0" y="18">Memory bandwidth per A$1,000 of hardware — GB/s</text>
+    <text class="lbl-b" x="0" y="65" font-size="14">Ryzen AI Max+ 395 mini PC</text><text class="lbl" x="0" y="82" font-size="12">256 GB/s · A$2,800</text><rect class="bar-bad" x="380" y="44" width="600.0" height="50" rx="4"/><text class="val" x="994.0" y="75" font-size="16">91</text><text class="lbl-b" x="0" y="137" font-size="14">NVIDIA DGX Spark</text><text class="lbl" x="0" y="154" font-size="12">273 GB/s · A$6,500</text><rect class="bar-neutral" x="380" y="116" width="276.9" height="50" rx="4"/><text class="val" x="670.9" y="147" font-size="16">42</text><text class="callout-t" x="1050" y="113" text-anchor="middle" font-size="20">2.2×</text>
+  </svg>
+    <div class="grid g-2" style="margin-top:clamp(6px,1.4vh,18px)">
       <div class="card">
-        <div class="k">What a data centre pays for</div>
-        <ul class="ticks" style="margin-top:2px">
-          <li><span class="m grey">×</span>Land, and a planning fight to use it</li>
-          <li><span class="m grey">×</span>Building, cooling plant and water</li>
-          <li><span class="m grey">×</span>A grid connection — often a multi-year queue</li>
-          <li><span class="m grey">×</span>Security, redundancy and network</li>
-          <li><span class="m grey">×</span>Electricity at commercial rates, all day</li>
-        </ul>
+        <div class="k">A data centre pays for</div>
+        <p>Land and planning · building, cooling plant and water · a grid connection, often a
+          multi-year queue · physical security and redundancy · electricity at commercial rates,
+          all day.</p>
       </div>
       <div class="card accent">
-        <div class="k">What SunStack pays for</div>
-        <ul class="ticks" style="margin-top:2px">
-          <li><span class="m">✓</span>A A$2,800 box and a A$400 install</li>
-          <li><span class="m">✓</span>A revenue share to the homeowner</li>
-          <li><span class="m">✓</span>About A$30 a year of electricity</li>
-          <li><span class="m">✓</span>Nothing else — the building, cooling, grid connection and security already exist, and somebody else paid for all four</li>
-        </ul>
+        <div class="k">SunStack pays for</div>
+        <p>A A$2,800 box · a A$400 install · a revenue share to the homeowner · about
+          <b>A$30 a year of electricity</b>. The building, cooling, grid connection and security
+          already exist, and somebody else paid for all four.</p>
       </div>
     </div>
-
-    <div class="card accent" style="margin-top:clamp(10px,2vh,24px)">
-      <div class="split" style="align-items:center;gap:clamp(16px,3vw,40px)">
-        <div>
-          <div class="k">The line that matters</div>
-          <h3 class="h" style="font-size:clamp(19px,2.1vw,29px)">Over 200× the value<br>from the same sunshine.</h3>
-        </div>
-        <p class="small">A unit consumes about <b>394 kWh</b> a year. Exported to the grid at 4¢
-          those kilowatt-hours earn a household roughly <b>A$16</b>. Turned into tokens, the same
-          energy produces <b>A$4,044</b> of compute revenue. We are not competing for electrons —
-          we are repricing them.</p>
-      </div>
-    </div>
+    <p class="note">Bandwidth per dollar matters because inference on these models is bound by
+      memory bandwidth, not raw compute. Specifications and street prices are published;
+      the comparison is arithmetic, not estimate.</p>
   </div>
 </section>
 
-<!-- ═══════════ 12 · SUPPLY SIDE ═══════════ -->
-<section class="slide parchment" id="s13" data-n="13 / 17" data-title="Supply side">
-  <div class="wrap stack">
-    <div class="eyebrow">Supply side</div>
-    <h2 class="h">Four million roofs.<br>We need ten thousand.</h2>
-    <p class="lede">Australia has <b>4.3 million homes with rooftop solar</b> — one in three
-      households, the highest uptake on Earth. Filtering hard still leaves a pool three orders
-      of magnitude larger than our plan.</p>
-
-    <div class="bars" style="margin-top:clamp(10px,2vh,24px)">
-      <div class="row">
-        <div class="lab">Homes with rooftop solar</div>
-        <div class="track"><div class="fill" style="width:100%"></div><div class="val">4.3M</div></div>
-      </div>
-      <div class="row">
-        <div class="lab">Owner-occupied <span style="color:var(--muted);font-weight:400">· can authorise hardware</span></div>
-        <div class="track"><div class="fill" style="width:79%"></div><div class="val">3.4M</div></div>
-      </div>
-      <div class="row">
-        <div class="lab">In serviceable areas <span style="color:var(--muted);font-weight:400">· reliable broadband</span></div>
-        <div class="track"><div class="fill soft" style="width:56%"></div><div class="val">2.4M</div></div>
-      </div>
-      <div class="row">
-        <div class="lab"><b>Physically suitable</b> <span style="color:var(--muted);font-weight:400">· space + switchboard</span></div>
-        <div class="track"><div class="fill soft" style="width:42%"></div><div class="val">1.8M</div></div>
-      </div>
-    </div>
-
-    <div class="grid g-3" style="margin-top:clamp(12px,2.2vh,26px)">
-      <div class="card accent stat">
-        <div class="n amber">0.55%</div>
-        <div class="l">Of the serviceable pool is all we need for <b>10,000 nodes</b> — and just
-          <b>0.06%</b> for the 1,000-node plan.</div>
-      </div>
-      <div class="card stat">
-        <div class="n">100,000+</div>
-        <div class="l"><b>Already proven.</b> Origin's VPP alone has 100,000+ connected household
-          services. Australians join aggregator programs at six-figure scale — we need a tenth of
-          one incumbent's book.</div>
-        <div class="src">Origin Energy / IEEFA, 2026</div>
-      </div>
-      <div class="card stat">
-        <div class="n">0.01%</div>
-        <div class="l"><b>Energy is not the constraint.</b> 10,000 nodes would draw 0.01% of the
-          ~40 TWh Australia's 28.3 GW rooftop fleet makes each year — a fleet now bigger than all
-          remaining coal generation.</div>
-        <div class="src">My Energy Group / AEMO, 2026</div>
-      </div>
-    </div>
-
-    <p class="note">
-      Funnel filters are our estimates: 80% owner-occupied, 70% in serviceable areas, 75%
-      physically suitable. A node draws ~1.1 kWh a day — about <b>4% of a typical 6.6 kW
-      system's output</b> — so generation screens out almost no one. The binding constraint is
-      willingness to host, not eligibility.
-    </p>
-  </div>
-</section>
-
-<!-- ═══════════ 13 · MARKET ═══════════ -->
-<section class="slide dark" id="s14" data-n="14 / 17" data-title="Market">
-  <div class="wrap stack">
-    <div class="eyebrow">Market</div>
-    <h2 class="h">We do not need to win.<br>We need to show up.</h2>
-
-    <div class="grid g-3" style="margin-top:clamp(10px,2vh,24px)">
-      <div class="card stat">
-        <div class="n">A$15B</div>
-        <div class="l"><b>TAM</b> — total Australian AI market by 2030 (US$9.8B), compounding at roughly 18% a year.</div>
-        <div class="src">Grand View Research / consensus</div>
-      </div>
-      <div class="card stat">
-        <div class="n">A$946M</div>
-        <div class="l"><b>SAM</b> — Australian spend on AI-optimised infrastructure in 2026 alone, up <b>128%</b> year on year.</div>
-        <div class="src">IDC Australia, 2026</div>
-      </div>
-      <div class="card stat accent">
-        <div class="n amber">A$44.5M</div>
-        <div class="l"><b>SOM</b> — gross compute revenue at 10,000 nodes: <b>4.7%</b> of this year's serviceable market.</div>
-        <div class="src">Base case × 10,000 nodes</div>
-      </div>
-    </div>
-
-    <div class="stack-sm" style="margin-top:clamp(12px,2.4vh,28px)">
-      <h3 class="h" style="font-size:clamp(15px,1.4vw,19px)">Share of the 2026 serviceable market we would need</h3>
-      <div class="bars">
-        <div class="row"><div class="lab">1,000 nodes <span style="color:#8a8378;font-weight:400">· A$4.45M</span></div><div class="track"><div class="fill soft" style="width:10%"></div><div class="val">0.5%</div></div></div>
-        <div class="row"><div class="lab">10,000 nodes <span style="color:#8a8378;font-weight:400">· A$44.5M</span></div><div class="track"><div class="fill" style="width:100%"></div><div class="val">4.7%</div></div></div>
-      </div>
-    </div>
-
-    <p class="lede" style="margin-top:clamp(8px,1.6vh,20px)">
-      Supply is not the constraint — slide 13 shows we need 0.55% of eligible homes.
-      <b>Demand and execution are the constraint, and capital buys both.</b>
-    </p>
-  </div>
-</section>
-
-<!-- ═══════════ 13 · FACT VS ESTIMATE ═══════════ -->
-<section class="slide tinted" id="s15" data-n="15 / 17" data-title="Fact vs estimate">
+<section class="slide tinted" id="s11" data-n="11 / 13" data-title="Fact vs estimate">
   <div class="wrap stack">
     <div class="eyebrow">Diligence</div>
     <h2 class="h">What is verified, and what<br>we are still buying data on.</h2>
-
     <div class="grid g-2" style="margin-top:clamp(10px,2vh,24px)">
       <div class="card">
         <div class="k" style="color:#2f8a6b">Third-party verified</div>
         <ul class="ticks" style="margin-top:2px">
           <li><span class="m">✓</span>Hardware specifications and street prices</li>
           <li><span class="m">✓</span>DGX Spark concurrency benchmarks</li>
-          <li><span class="m">✓</span>Published API token prices across six providers</li>
-          <li><span class="m">✓</span>Australian AI infrastructure spend and growth</li>
-          <li><span class="m">✓</span>Rooftop solar counts and feed-in tariffs</li>
+          <li><span class="m">✓</span>Published token prices across six providers</li>
+          <li><span class="m">✓</span>Government onshore-hosting mandate and ICT spend</li>
+          <li><span class="m">✓</span>ABS business counts, AI adoption and university R&amp;D</li>
+          <li><span class="m">✓</span>Rooftop solar counts, feed-in tariffs, VPP enrolment</li>
         </ul>
       </div>
       <div class="card accent">
         <div class="k">Our estimate — and how we test it</div>
         <ul class="ticks" style="margin-top:2px">
           <li><span class="m grey">→</span><b>60% paid utilisation.</b> The biggest lever. Test: a 90-day metered pilot with paying design partners, not letters of intent.</li>
-          <li><span class="m grey">→</span><b>A$1.90/M blended price.</b> Test: signed, invoiced usage showing what the sovereignty premium is actually worth.</li>
+          <li><span class="m grey">→</span><b>A$1.90/M blended price.</b> Test: signed, invoiced usage showing what the sovereignty premium is worth.</li>
           <li><span class="m grey">→</span><b>300 tok/s on ROCm.</b> Benchmarks are CUDA. Test: reproduce on Ryzen AI Max before buying at volume.</li>
-          <li><span class="m grey">→</span><b>A$1.4M overhead at 1,000 nodes.</b> Test: actual support hours and field-visit costs from the first cohort.</li>
+          <li><span class="m grey">→</span><b>The supply funnel filters.</b> Test: conversion rates from the first 500 household approaches.</li>
         </ul>
       </div>
     </div>
-
     <p class="lede" style="margin-top:clamp(8px,1.6vh,20px)">
-      Every number here is a hypothesis with a test attached. We already discarded two of our own
-      assumptions — a 95 tok/s throughput and an A$10–12 token price — when the evidence disagreed.
+      Every number here is a hypothesis with a test attached. We have already discarded two of our
+      own assumptions — a 95 tok/s throughput and an A$10–12 token price — when the evidence disagreed.
     </p>
   </div>
 </section>
 
-<!-- ═══════════ 14 · CAPITAL ═══════════ -->
-<section class="slide" id="s16" data-n="16 / 17" data-title="Capital">
+<section class="slide dark" id="s12" data-n="12 / 13" data-title="Capital">
   <div class="wrap stack">
     <div class="eyebrow">Capital</div>
     <h2 class="h">A$2.4M is already committed.</h2>
-    <p class="lede">A mix of competitive research grants and equity — capital that has already
-      been through someone else's diligence. <b>The next dollars buy nodes.</b></p>
-
-    <div class="split" style="margin-top:clamp(10px,2vh,24px);align-items:start">
+    <p class="lede">A mix of competitive research grants and equity — capital that has already been
+      through someone else's diligence. <b>The next dollars buy nodes.</b></p>
+    <div class="grid g-4" style="margin-top:clamp(10px,2vh,26px)">
+      <div class="card stat accent"><div class="n amber">250</div><div class="l">Company-owned units per A$1M deployed</div></div>
+      <div class="card stat"><div class="n">A$1.01M</div><div class="l">Gross compute revenue added, per year</div></div>
+      <div class="card stat"><div class="n">A$0.65M</div><div class="l">Net cash to SunStack, per year</div></div>
+      <div class="card stat"><div class="n">1.5 yrs</div><div class="l">Payback on that million</div></div>
+    </div>
+    <div class="split" style="margin-top:clamp(10px,2vh,26px);align-items:start">
       <div class="stack-sm">
-        <h3 class="h" style="font-size:clamp(16px,1.5vw,20px)">What every A$1M buys</h3>
-        <div class="tbl-wrap">
-        <table class="tbl"><tbody>
-          <tr><td>Company-owned units deployed</td><td><b>250</b></td></tr>
-          <tr><td>Gross compute revenue added</td><td><b>A$1.01M / yr</b></td></tr>
-          <tr><td>Net cash to SunStack</td><td><b>A$0.65M / yr</b></td></tr>
-          <tr class="total"><td>Payback on that million</td><td><b>1.5 yrs</b></td></tr>
-        </tbody></table>
-        </div>
-        <p class="note">At the base case and the A$4,000 all-in unit cost. Overhead is carried
-          separately and is covered from about 500 owned nodes onward.</p>
-      </div>
-
-      <div class="stack-sm">
-        <h3 class="h" style="font-size:clamp(16px,1.5vw,20px)">Where it goes</h3>
+        <h3 class="h" style="font-size:clamp(15px,1.4vw,19px)">Where it goes</h3>
         <div class="bars">
           <div class="row"><div class="lab">Fleet &amp; hardware</div><div class="track"><div class="fill" style="width:100%"></div><div class="val">55%</div></div></div>
           <div class="row"><div class="lab">Engineering</div><div class="track"><div class="fill soft" style="width:45.5%"></div><div class="val">25%</div></div></div>
           <div class="row"><div class="lab">Field ops &amp; install</div><div class="track"><div class="fill grey" style="width:21.8%"></div><div class="val">12%</div></div></div>
           <div class="row"><div class="lab">Go-to-market</div><div class="track"><div class="fill grey" style="width:14.5%"></div><div class="val">8%</div></div></div>
         </div>
-        <div class="card accent" style="margin-top:12px">
-          <p><b>The ask.</b> We are raising to take the fleet past overhead break-even and into the
-            compounding zone — around 500 owned nodes. We will walk you through the number and the
-            terms in the room.</p>
+      </div>
+      <div class="card accent">
+        <div class="k">The ask</div>
+        <p>We are raising to take the fleet past overhead break-even and into the compounding
+          zone — around 500 owned nodes. We will walk you through the number and the terms
+          in the room.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide dense" id="s13" data-n="13 / 13" data-title="Appendix">
+  <div class="wrap stack">
+    <div class="eyebrow">Appendix</div>
+    <h2 class="h">The full model.</h2>
+    <div class="split" style="align-items:start;gap:clamp(20px,3vw,44px)">
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>Per owned unit, per year</th><th>Floor</th><th class="hi">Base</th><th>Upside</th></tr></thead>
+          <tbody>
+            <tr><td>Throughput, batched</td><td>180</td><td class="hi">300</td><td>500 tok/s</td></tr>
+            <tr><td>Hours serving / day</td><td>8</td><td class="hi">9</td><td>10 h</td></tr>
+            <tr><td>Paid utilisation</td><td>45%</td><td class="hi">60%</td><td>70%</td></tr>
+            <tr><td>Sell price / M tokens</td><td>A$1.30</td><td class="hi">A$1.90</td><td>A$2.60</td></tr>
+            <tr><td>Tokens sold</td><td>851 M</td><td class="hi">2,129 M</td><td>4,599 M</td></tr>
+            <tr><td><b>Gross revenue</b></td><td>A$1,107</td><td class="hi">A$4,044</td><td>A$11,957</td></tr>
+            <tr><td class="dim">homeowner (30/25/20%)</td><td class="dim">(332)</td><td class="hi dim">(1,011)</td><td class="dim">(2,391)</td></tr>
+            <tr><td class="dim">energy</td><td class="dim">(30)</td><td class="hi dim">(30)</td><td class="dim">(30)</td></tr>
+            <tr><td class="dim">node maintenance</td><td class="dim">(400)</td><td class="hi dim">(400)</td><td class="dim">(400)</td></tr>
+            <tr class="total"><td>Net cash</td><td>A$345</td><td class="hi">A$2,604</td><td>A$9,136</td></tr>
+            <tr class="total"><td>Payback on A$4,000</td><td>11.6 y</td><td class="hi">1.5 y</td><td>0.4 y</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>1,000-node fleet</th><th class="hi">All owned</th><th>50/50</th><th>All sold</th></tr></thead>
+          <tbody>
+            <tr><td>Gross revenue</td><td class="hi">A$4.45M</td><td>A$4.45M</td><td>A$4.45M</td></tr>
+            <tr><td>Node contribution</td><td class="hi">A$2.87M</td><td>A$1.83M</td><td>A$0.79M</td></tr>
+            <tr><td class="dim">company operating cost</td><td class="hi dim">(1.40M)</td><td class="dim">(1.40M)</td><td class="dim">(1.40M)</td></tr>
+            <tr class="total"><td>Operating cash / yr</td><td class="hi">A$1.47M</td><td>A$0.43M</td><td>(A$0.60M)</td></tr>
+            <tr><td>Capital deployed</td><td class="hi">A$5.14M</td><td>A$2.57M</td><td>A$0</td></tr>
+            <tr class="total"><td>Return on capital</td><td class="hi">29%</td><td>17%</td><td>n/a</td></tr>
+            <tr class="total"><td>Break-even fleet</td><td class="hi">488</td><td>—</td><td>1,937</td></tr>
+          </tbody>
+        </table>
+        <div class="formula" style="margin-top:14px;font-size:clamp(9.5px,.92vw,12px)">
+          <span class="lhs">Payback =</span>
+          <span class="fr">
+            <div class="num"><span class="t">C</span><span class="sub">hardware</span> + <span class="t">C</span><span class="sub">installation</span> + <span class="t">C</span><span class="sub">platform&nbsp;build</span></div>
+            <div class="den"><span class="t">R</span><span class="sub">tokens</span> + <span class="t">R</span><span class="sub">grid</span> − C<span class="sub">energy</span> − C<span class="sub">homeowner</span> − C<span class="sub">maintenance</span> − C<span class="sub">network</span> − C<span class="sub">company&nbsp;ops</span></div>
+          </span>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ═══════════ 15 · APPENDIX ═══════════ -->
-<section class="slide dark" id="s17" data-n="17 / 17" data-title="Assumptions & sources">
-  <div class="wrap stack">
-    <div class="eyebrow">Appendix</div>
-    <h2 class="h">Assumptions and sources.</h2>
-
-    <div class="split" style="margin-top:clamp(8px,1.8vh,22px);align-items:start">
-      <div class="tbl-wrap">
-      <table class="tbl">
-        <thead><tr><th></th><th>Unit</th><th>Spark-class</th></tr></thead>
-        <tbody>
-          <tr><td>Hardware</td><td>A$2,800</td><td>A$6,500</td></tr>
-          <tr><td>Installation</td><td>A$400</td><td>A$500</td></tr>
-          <tr><td>Allocated platform &amp; deployment</td><td>A$800</td><td>A$800</td></tr>
-          <tr class="total"><td>All-in cost per node</td><td>A$4,000</td><td>A$7,800</td></tr>
-          <tr><td>Node maintenance / yr</td><td>A$400</td><td>A$500</td></tr>
-          <tr><td>Average draw while serving</td><td>120 W</td><td>200 W</td></tr>
-          <tr><td>Energy cost / yr</td><td>A$30</td><td>A$50</td></tr>
-          <tr><td>Base throughput, batched</td><td>300 tok/s</td><td>400 tok/s</td></tr>
-          <tr><td>Base net cash / yr</td><td>A$2,604</td><td>A$3,494</td></tr>
-          <tr class="total"><td>Base payback</td><td>1.5 yrs</td><td>2.2 yrs</td></tr>
-        </tbody>
-      </table>
-      </div>
-
-      <ul class="ticks">
-        <li><span class="m grey">·</span>Grid purchase 30¢/kWh; surplus solar opportunity cost 4–5¢/kWh; homeowner share 20–30%; company operating cost A$1.4M/yr at 1,000 nodes; AUD/USD 0.722 at 7 September 2026.</li>
-        <li><span class="m grey">·</span><b>Excluded entirely:</b> GST, income tax, interest, grid and VPP revenue, subsidies, additional cooling, demand charges and battery degradation.</li>
-        <li><span class="m grey">·</span><b>Superseded:</b> an earlier internal model assumed 95 tok/s and A$10–12 per million tokens. Both were wrong — throughput far too low, price roughly eight times too high.</li>
-        <li><span class="m grey">·</span><b>Not a forecast.</b> This is a decision model. It shows what has to be true, not what we promise will happen.</li>
-      </ul>
-    </div>
-
-    <p class="note" style="margin-top:clamp(8px,1.6vh,18px)">
-      <b>Sources</b> · Dendro Logic, DGX Spark concurrency benchmark, 2026. NVIDIA DGX Spark
-      hardware documentation and IntuitionLabs review. AMD Ryzen AI Max+ 395 specifications and
-      mini-PC retail listings. Artificial Analysis, Groq, Fireworks, Together, DeepInfra and
-      MiniMax published token rates. IDC Australia, 2026. Grand View Research. DCCEEW / Clean
-      Energy Regulator. Victorian Essential Services Commission. SunStack internal model,
-      <em>GPU Business Model — A$300K scenario analysis</em>, v1.0, 7 September 2026.
-      Confidential — figures are budget estimates and do not constitute a promise of returns.
+    <p class="note">
+      Unit cost A$4,000 = A$2,800 hardware + A$400 install + A$800 allocated platform. Spark-class
+      node: A$7,800 all-in, 400 tok/s, A$3,494 net, 2.2 yr payback. Energy 120 W over 9 h/day =
+      394 kWh/yr, ~90% surplus solar at 5¢ opportunity cost, ~10% grid at 30¢. Company operating
+      cost A$1.4M/yr assumes ~9 FTE plus infrastructure and G&amp;A. Excluded: GST, income tax,
+      interest, grid and VPP revenue, subsidies, extra cooling, demand charges, battery degradation.
+      Not a forecast — a decision model showing what has to be true.
+    </p>
+    <p class="note">
+      <b>Sources</b> · Dendro Logic DGX Spark concurrency benchmark, 2026. NVIDIA DGX Spark
+      documentation; AMD Ryzen AI Max+ 395 specifications and retail listings. Groq, Fireworks,
+      Together, DeepInfra, MiniMax published token rates; AUD/USD 0.722 at 7 Sep 2026.
+      IDC Australia (AI infrastructure spend). ABS (business counts, AI adoption, higher-education
+      R&amp;D). Digital Transformation Agency Hosting Certification Framework and Cloud Policy.
+      DCCEEW / Clean Energy Regulator (rooftop solar); Origin Energy / IEEFA (VPP enrolment);
+      state regulators (feed-in tariffs). SunStack internal model v1.0, 7 September 2026.
+      Confidential — budget estimates, not a promise of returns.
     </p>
   </div>
 </section>
-
 <nav id="rail" aria-label="Slide navigation"></nav>
 <div id="hint"><kbd>↓</kbd> <kbd>Space</kbd> to advance &nbsp;·&nbsp; <kbd>P</kbd> to print</div>
 

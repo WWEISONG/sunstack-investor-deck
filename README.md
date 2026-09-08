@@ -10,26 +10,23 @@ behind a national network of solar-powered AI compute nodes.
 This is the **economics companion** to the SunStack product deck. It deliberately does not
 re-tell the background story or demo the product — it answers the money questions:
 
-| # | Slide | Visual |
+| # | Slide | Chart |
 |---|---|---|
-| 01 | Cover — headline economics | |
-| 02 | Four revenue lines, one cost stack | |
-| 03 | What a token is worth — benchmarked against the market | bar chart |
-| 04 | Throughput — batched serving vs single-stream | |
-| 05 | Cost of a unit — bandwidth per dollar | |
-| 06 | **Unit economics** — floor / base / upside | |
-| 07 | **Payback** — cumulative cash per unit over 5 years | **line + range chart** |
-| 08 | **What moves it** — payback sensitivity | **tornado chart** |
-| 09 | Own the node, or sell it — capital structure | |
-| 10 | **1,000-node fleet P&L** and break-even | **break-even chart** |
-| 11 | Revenue beyond inference | |
-| 12 | Why the margin holds — the cost floor | |
-| 13 | **Supply side** — 4.3M solar homes, and the funnel to eligible | funnel chart |
-| 14 | Market and the share required | bar chart |
-| 15 | Fact vs. estimate — what's verified, what's being tested | |
-| 16 | Capital and use of funds | |
-| 17 | Appendix — assumptions and sources | |
+| 01 | Cover — four headline numbers | |
+| 02 | **The arbitrage** — one kWh priced three ways | bar, 257× |
+| 03 | **What a node earns** — A$4,044 → A$2,604 | waterfall |
+| 04 | **Payback** — 18 months | 5-yr cumulative cash + range |
+| 05 | The two assumptions — price and throughput, both benchmarked | price bars |
+| 06 | **What moves it** — sensitivity | tornado |
+| 07 | **Who buys it** — demand segments and their size | market share bar |
+| 08 | **Who hosts it** — 4.3M solar homes → 1.8M eligible | funnel |
+| 09 | **1,000 nodes** — capital buys a 4× shorter road | break-even lines |
+| 10 | Why the margin holds — the cost floor | bandwidth per dollar |
+| 11 | Fact vs. estimate — what's verified, what's being tested | |
+| 12 | Capital and use of funds | allocation bars |
+| 13 | Appendix — full model, assumptions, sources | |
 
+Nine of thirteen slides lead with a chart. Every headline claim carries a number and a source.
 Charts are hand-authored inline SVG — no chart library and no CDN, so the deck renders
 identically offline, in print, and in both light and dark slide treatments.
 
@@ -42,7 +39,7 @@ identically offline, in print, and in both light and dark slide treatments.
 | First / last | `Home` / `End` |
 | Export to PDF | press `P`, then "Save as PDF" (page size preset to 297 × 167 mm landscape) |
 
-Deep links work — append `#s7` to open straight on the payback curve.
+Deep links work — append `#s4` to open straight on the payback curve.
 
 ## Design
 
@@ -58,7 +55,7 @@ text nodes inside grid/flex containers.
 ## Structure
 
 ```
-index.html          17 sections + inline SVG charts, self-contained
+index.html          13 sections + inline SVG charts, self-contained
 assets/css/deck.css design tokens, slide shell, components, print styles
 assets/js/deck.js   keyboard nav, dot rail, progress bar, deep links
 assets/fonts/       Inter + JetBrains Mono variable woff2 (self-hosted)
