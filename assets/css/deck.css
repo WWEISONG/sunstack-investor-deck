@@ -504,11 +504,11 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
 .chart .ax        { stroke: var(--line); stroke-width: 1; }
 .chart .gridline  { stroke: var(--line-soft); stroke-width: 1; }
 .chart .zero      { stroke: var(--muted); stroke-width: 1.25; stroke-dasharray: 5 4; opacity: .8; }
-.chart .tick      { fill: var(--muted); font-size: 11px; }
-.chart .axname    { fill: var(--muted); font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
-.chart .lbl       { fill: var(--body); font-size: 12px; font-weight: 500; }
-.chart .lbl-b     { fill: var(--ink); font-size: 12.5px; font-weight: 700; }
-.chart .val       { fill: var(--ink); font-size: 12px; font-weight: 700; }
+.chart .tick      { fill: var(--muted); font-size: 13px; }
+.chart .axname    { fill: var(--muted); font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
+.chart .lbl       { fill: var(--body); font-size: 14px; font-weight: 500; }
+.chart .lbl-b     { fill: var(--ink); font-size: 15px; font-weight: 700; }
+.chart .val       { fill: var(--ink); font-size: 14.5px; font-weight: 700; }
 .chart .band      { fill: var(--amber); opacity: .12; }
 .chart .ln        { fill: none; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
 .chart .ln.base   { stroke: var(--amber); stroke-width: 3.5; }
@@ -520,7 +520,7 @@ body.on-dark kbd { border-color: var(--line-dark); background: var(--dark-2); co
 .chart .bar-bad   { fill: var(--amber); }
 .chart .bar-base  { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 4 3; }
 .chart .callout   { fill: var(--amber-soft); stroke: var(--amber); stroke-width: 1; }
-.chart .callout-t { fill: var(--amber-strong); font-size: 12px; font-weight: 700; }
+.chart .callout-t { fill: var(--amber-strong); font-size: 14.5px; font-weight: 700; }
 
 .dark .chart .ax        { stroke: var(--line-dark); }
 .dark .chart .gridline  { stroke: #2a251d; }
