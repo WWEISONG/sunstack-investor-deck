@@ -1,0 +1,5 @@
+use_of_one_kWh,value_aud_per_kWh,source
+Exported to the grid,0.04,State regulators 2026; many retailers 0c midday
+Bought back at night,0.3,Retail tariffs 2026
+Converted to AI tokens,10.26,Base case: gross revenue / annual kWh
+Ratio vs export,256x,

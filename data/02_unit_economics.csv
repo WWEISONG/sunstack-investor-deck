@@ -1,0 +1,5 @@
+scenario,throughput_tok_s,hours_per_day,paid_utilisation,price_aud_per_M_tokens,tokens_sold_M_per_yr,gross_revenue_aud,homeowner_share,homeowner_paid_aud,energy_aud,maintenance_aud,net_cash_aud,capex_aud,payback_years,return_on_capital
+floor,220,8,50%,1.5,1156,1734,30%,520,26,400,788,4000.0,5.08,20%
+base,300,9,60%,1.9,2129,4044,25%,1011,30,400,2604,4000.0,1.54,65%
+upside,500,10,70%,2.6,4599,11957,20%,2391,33,400,9133,4000.0,0.44,228%
+spark (base case),400,9,60%,1.9,2838,5393,25%,1348,49,500,3495,7800.0,2.23,45%

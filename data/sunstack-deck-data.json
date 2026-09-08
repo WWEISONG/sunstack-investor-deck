@@ -1,0 +1,785 @@
+{
+ "assumptions": {
+  "file": "01_assumptions.csv",
+  "header": [
+   "parameter",
+   "value",
+   "unit",
+   "status",
+   "source_or_test"
+  ],
+  "rows": [
+   [
+    "Unit hardware (Ryzen AI Max+ 395, 128GB)",
+    2800.0,
+    "AUD",
+    "VERIFIED",
+    "Retail listings; US$1,499-1,999 at AUD/USD 0.722"
+   ],
+   [
+    "Unit installation",
+    400.0,
+    "AUD",
+    "ESTIMATE",
+    "TEST: firm installer quotes at volume"
+   ],
+   [
+    "Unit allocated platform + deployment",
+    800.0,
+    "AUD",
+    "ESTIMATE",
+    "Platform build amortised across fleet"
+   ],
+   [
+    "Unit all-in capex",
+    4000.0,
+    "AUD",
+    "DERIVED",
+    "hardware + install + platform"
+   ],
+   [
+    "Spark hardware (NVIDIA DGX Spark, 128GB)",
+    6500.0,
+    "AUD",
+    "VERIFIED",
+    "US$4,699 (raised from $3,999 Feb 2026)"
+   ],
+   [
+    "Spark all-in capex",
+    7800.0,
+    "AUD",
+    "DERIVED",
+    "hardware + install + platform"
+   ],
+   [
+    "Unit node maintenance",
+    400.0,
+    "AUD/yr",
+    "ESTIMATE",
+    "TEST: support hours from first cohort"
+   ],
+   [
+    "Spark node maintenance",
+    500.0,
+    "AUD/yr",
+    "ESTIMATE",
+    "TEST: support hours from first cohort"
+   ],
+   [
+    "Unit average draw",
+    120.0,
+    "W",
+    "ESTIMATE",
+    "TEST: metered draw in pilot"
+   ],
+   [
+    "Spark average draw",
+    200.0,
+    "W",
+    "VERIFIED",
+    "240W supply rating (NVIDIA docs); 200W assumed average"
+   ],
+   [
+    "Grid purchase price",
+    0.3,
+    "AUD/kWh",
+    "VERIFIED",
+    "Retail tariffs 2026 (30-40c)"
+   ],
+   [
+    "Surplus solar opportunity cost",
+    0.05,
+    "AUD/kWh",
+    "VERIFIED",
+    "State regulators 2026; export 3-6c, many 0c midday"
+   ],
+   [
+    "Solar export tariff",
+    0.04,
+    "AUD/kWh",
+    "VERIFIED",
+    "State regulators 2026"
+   ],
+   [
+    "Share of node energy from surplus solar",
+    0.9,
+    "ratio",
+    "ESTIMATE",
+    "TEST: metered solar vs grid split in pilot"
+   ],
+   [
+    "Company operating cost at 1,000 nodes",
+    1400000.0,
+    "AUD/yr",
+    "ESTIMATE",
+    "~9 FTE + infrastructure + G&A"
+   ],
+   [
+    "Our share of a customer-owned node's pool",
+    0.2,
+    "ratio",
+    "ASSUMPTION",
+    "Commercial term, not yet contracted"
+   ],
+   [
+    "Customer price for a unit, installed",
+    3900.0,
+    "AUD",
+    "ASSUMPTION",
+    "Commercial term, not yet tested"
+   ],
+   [
+    "AUD per USD",
+    1.385,
+    "ratio",
+    "VERIFIED",
+    "AUD/USD 0.722 at 7 Sep 2026"
+   ]
+  ]
+ },
+ "unit_economics": {
+  "file": "02_unit_economics.csv",
+  "header": [
+   "scenario",
+   "throughput_tok_s",
+   "hours_per_day",
+   "paid_utilisation",
+   "price_aud_per_M_tokens",
+   "tokens_sold_M_per_yr",
+   "gross_revenue_aud",
+   "homeowner_share",
+   "homeowner_paid_aud",
+   "energy_aud",
+   "maintenance_aud",
+   "net_cash_aud",
+   "capex_aud",
+   "payback_years",
+   "return_on_capital"
+  ],
+  "rows": [
+   [
+    "floor",
+    220,
+    8,
+    "50%",
+    1.5,
+    1156,
+    1734,
+    "30%",
+    520,
+    26,
+    400,
+    788,
+    4000.0,
+    5.08,
+    "20%"
+   ],
+   [
+    "base",
+    300,
+    9,
+    "60%",
+    1.9,
+    2129,
+    4044,
+    "25%",
+    1011,
+    30,
+    400,
+    2604,
+    4000.0,
+    1.54,
+    "65%"
+   ],
+   [
+    "upside",
+    500,
+    10,
+    "70%",
+    2.6,
+    4599,
+    11957,
+    "20%",
+    2391,
+    33,
+    400,
+    9133,
+    4000.0,
+    0.44,
+    "228%"
+   ],
+   [
+    "spark (base case)",
+    400,
+    9,
+    "60%",
+    1.9,
+    2838,
+    5393,
+    "25%",
+    1348,
+    49,
+    500,
+    3495,
+    7800.0,
+    2.23,
+    "45%"
+   ]
+  ]
+ },
+ "cost_stack": {
+  "file": "03_cost_stack.csv",
+  "header": [
+   "line_item",
+   "annual_aud",
+   "note"
+  ],
+  "rows": [
+   [
+    "Homeowner revenue share",
+    1011,
+    "25% of gross"
+   ],
+   [
+    "Node maintenance",
+    400,
+    "support, spares, replacement"
+   ],
+   [
+    "Electricity",
+    30,
+    "394 kWh/yr, 90% surplus solar"
+   ],
+   [
+    "Land",
+    0,
+    "the home already exists"
+   ],
+   [
+    "Building & cooling",
+    0,
+    "the home already exists"
+   ],
+   [
+    "Grid connection",
+    0,
+    "already connected"
+   ],
+   [
+    "Physical security & staff",
+    0,
+    "the household"
+   ],
+   [
+    "TOTAL operating cost",
+    1441,
+    ""
+   ],
+   [
+    "Gross revenue",
+    4044,
+    ""
+   ],
+   [
+    "Gross margin",
+    "64.4%",
+    ""
+   ]
+  ]
+ },
+ "sensitivity": {
+  "file": "04_sensitivity.csv",
+  "header": [
+   "variable",
+   "low_value",
+   "high_value",
+   "payback_at_worst_yr",
+   "payback_at_best_yr",
+   "swing_yr"
+  ],
+  "rows": [
+   [
+    "Throughput (tok/s)",
+    220,
+    500,
+    2.23,
+    0.86,
+    1.36
+   ],
+   [
+    "Sell price (AUD/M tokens)",
+    1.5,
+    2.6,
+    2.04,
+    1.07,
+    0.96
+   ],
+   [
+    "Paid utilisation",
+    0.5,
+    0.7,
+    1.91,
+    1.29,
+    0.62
+   ],
+   [
+    "Hardware cost (AUD)",
+    3600,
+    2000,
+    1.84,
+    1.23,
+    0.61
+   ],
+   [
+    "Homeowner share",
+    0.3,
+    0.2,
+    1.67,
+    1.43,
+    0.24
+   ]
+  ]
+ },
+ "fleet": {
+  "file": "05_fleet_1000_nodes.csv",
+  "header": [
+   "ownership_mix",
+   "gross_revenue_aud",
+   "node_contribution_aud",
+   "company_opex_aud",
+   "operating_cash_aud",
+   "capital_deployed_aud",
+   "return_on_capital",
+   "fleet_payback_years"
+  ],
+  "rows": [
+   [
+    "all company-owned",
+    4448941,
+    2871228,
+    1400000,
+    1471228,
+    5140000,
+    "29%",
+    3.5
+   ],
+   [
+    "50/50",
+    4448941,
+    1833960,
+    1400000,
+    433960,
+    2570000,
+    "17%",
+    5.9
+   ],
+   [
+    "all customer-owned",
+    4448941,
+    796693,
+    1400000,
+    -603307,
+    0,
+    "n/a",
+    "never"
+   ]
+  ]
+ },
+ "fleet_breakeven": {
+  "file": "06_fleet_breakeven.csv",
+  "header": [
+   "metric",
+   "value"
+  ],
+  "rows": [
+   [
+    "Fleet composition",
+    "700 units + 300 Spark-class"
+   ],
+   [
+    "Average contribution per owned node",
+    2871
+   ],
+   [
+    "Average contribution per sold node",
+    797
+   ],
+   [
+    "Break-even fleet, company-owned",
+    488
+   ],
+   [
+    "Break-even fleet, customer-owned",
+    1757
+   ],
+   [
+    "Capital advantage",
+    "3.6x"
+   ]
+  ]
+ },
+ "arbitrage": {
+  "file": "07_arbitrage.csv",
+  "header": [
+   "use_of_one_kWh",
+   "value_aud_per_kWh",
+   "source"
+  ],
+  "rows": [
+   [
+    "Exported to the grid",
+    0.04,
+    "State regulators 2026; many retailers 0c midday"
+   ],
+   [
+    "Bought back at night",
+    0.3,
+    "Retail tariffs 2026"
+   ],
+   [
+    "Converted to AI tokens",
+    10.26,
+    "Base case: gross revenue / annual kWh"
+   ],
+   [
+    "Ratio vs export",
+    "256x",
+    ""
+   ]
+  ]
+ },
+ "market": {
+  "file": "08_market_and_supply.csv",
+  "header": [
+   "metric",
+   "value",
+   "unit",
+   "source"
+  ],
+  "rows": [
+   [
+    "TAM: Australian AI market by 2030",
+    15000000000.0,
+    "AUD",
+    "Grand View Research / consensus (US$9.8B)"
+   ],
+   [
+    "SAM: AI-optimised infrastructure spend 2026",
+    946000000.0,
+    "AUD",
+    "IDC Australia 2026"
+   ],
+   [
+    "SAM 2025",
+    736760125,
+    "AUD",
+    "Derived from +128.4% YoY"
+   ],
+   [
+    "SAM growth YoY",
+    "28.4%",
+    "",
+    "IDC Australia 2026"
+   ],
+   [
+    "SOM at 1,000 nodes",
+    4448941,
+    "AUD",
+    "Base case x 1,000"
+   ],
+   [
+    "SOM at 10,000 nodes",
+    44489412,
+    "AUD",
+    "Base case x 10,000"
+   ],
+   [
+    "Share of SAM at 1,000 nodes",
+    "0.47%",
+    "",
+    ""
+   ],
+   [
+    "Share of SAM at 10,000 nodes",
+    "4.70%",
+    "",
+    ""
+   ],
+   [
+    "Homes with rooftop solar",
+    4300000.0,
+    "homes",
+    "DCCEEW / Clean Energy Regulator"
+   ],
+   [
+    "...owner-occupied",
+    3440000,
+    "homes",
+    "ESTIMATE 80%"
+   ],
+   [
+    "...in serviceable areas",
+    2408000,
+    "homes",
+    "ESTIMATE 70%"
+   ],
+   [
+    "...physically suitable (eligible)",
+    1806000,
+    "homes",
+    "ESTIMATE 75%"
+   ],
+   [
+    "Eligible share needed for 10,000 nodes",
+    "0.55%",
+    "",
+    ""
+   ],
+   [
+    "National rooftop solar output",
+    40.0,
+    "TWh/yr",
+    "~28.3 GW fleet"
+   ],
+   [
+    "Energy drawn by 10,000 nodes",
+    "0.010%",
+    "of national output",
+    ""
+   ]
+  ]
+ },
+ "demand": {
+  "file": "09_demand_segments.csv",
+  "header": [
+   "segment",
+   "size",
+   "unit",
+   "note",
+   "source"
+  ],
+  "rows": [
+   [
+    "Universities & research",
+    16400000000.0,
+    "AUD/yr",
+    "Higher-education R&D, +17% in two years. Beachhead: no classification barrier",
+    "ABS 2024 release"
+   ],
+   [
+    "Government",
+    6000000000.0,
+    "AUD/yr",
+    "Commonwealth ICT procurement. GATED: sensitive/PROTECTED needs PSPF-zoned facilities a home cannot meet",
+    "DTA Hosting Certification Framework; Cloud Policy 1 Jul 2026"
+   ],
+   [
+    "Business using AI",
+    337773,
+    "businesses",
+    "12% of 2,814,778 actively trading",
+    "ABS, 30 June 2026"
+   ],
+   [
+    "All Australian businesses",
+    2814778,
+    "businesses",
+    "",
+    "ABS, 30 June 2026"
+   ],
+   [
+    "AI-optimised infrastructure spend",
+    946000000.0,
+    "AUD/yr",
+    "+128% YoY",
+    "IDC Australia 2026"
+   ]
+  ]
+ },
+ "benchmarks": {
+  "file": "10_benchmarks.csv",
+  "header": [
+   "benchmark",
+   "value",
+   "unit",
+   "source"
+  ],
+  "rows": [
+   [
+    "Qwen3.8 Flash output price",
+    0.58,
+    "AUD/M tokens",
+    "Published rates, converted at 0.722"
+   ],
+   [
+    "Llama 3.3 70B price (low)",
+    0.82,
+    "AUD/M tokens",
+    "Groq / Together / Fireworks"
+   ],
+   [
+    "Llama 3.3 70B price (high)",
+    1.25,
+    "AUD/M tokens",
+    "Groq / Together / Fireworks"
+   ],
+   [
+    "Global average token cost",
+    1.61,
+    "AUD/M tokens",
+    "Industry tracking, Aug 2026"
+   ],
+   [
+    "MiniMax M2 output price",
+    1.64,
+    "AUD/M tokens",
+    "CNY 8.4/M published"
+   ],
+   [
+    "SunStack blended price (modelled)",
+    1.9,
+    "AUD/M tokens",
+    "ESTIMATE"
+   ],
+   [
+    "Frontier output price (low)",
+    21,
+    "AUD/M tokens",
+    "GPT/Claude class"
+   ],
+   [
+    "Frontier output price (high)",
+    104,
+    "AUD/M tokens",
+    "GPT/Claude class"
+   ],
+   [
+    "DGX Spark gpt-oss 120B single-stream",
+    33.53,
+    "tok/s",
+    "Dendro Logic concurrency benchmark 2026"
+   ],
+   [
+    "DGX Spark gpt-oss 120B at 256 concurrent",
+    862.84,
+    "tok/s",
+    "Dendro Logic concurrency benchmark 2026"
+   ],
+   [
+    "DGX Spark Nemotron 49B single-stream",
+    5.79,
+    "tok/s",
+    "Dendro Logic concurrency benchmark 2026"
+   ],
+   [
+    "DGX Spark Nemotron 49B at 256 concurrent",
+    695.11,
+    "tok/s",
+    "Dendro Logic concurrency benchmark 2026"
+   ],
+   [
+    "SunStack modelled throughput",
+    300,
+    "tok/s",
+    "ESTIMATE: ~1/3 of benchmarked peak"
+   ],
+   [
+    "Ryzen AI Max+ 395 memory bandwidth",
+    256,
+    "GB/s",
+    "AMD specifications"
+   ],
+   [
+    "DGX Spark memory bandwidth",
+    273,
+    "GB/s",
+    "NVIDIA specifications"
+   ],
+   [
+    "Ryzen bandwidth per A$1,000",
+    91,
+    "GB/s",
+    ""
+   ],
+   [
+    "Spark bandwidth per A$1,000",
+    42,
+    "GB/s",
+    ""
+   ],
+   [
+    "Data centre average PUE",
+    1.52,
+    "ratio",
+    "Uptime Institute Global Data Center Survey 2026"
+   ],
+   [
+    "Origin VPP connected services",
+    100000,
+    "households",
+    "Origin Energy / IEEFA 2026"
+   ],
+   [
+    "Home batteries installed",
+    500000,
+    "batteries",
+    "PM's Office, 14 Aug 2026"
+   ]
+  ]
+ },
+ "capital": {
+  "file": "11_capital.csv",
+  "header": [
+   "metric",
+   "value",
+   "unit"
+  ],
+  "rows": [
+   [
+    "Capital already committed",
+    2400000.0,
+    "AUD (grants + equity)"
+   ],
+   [
+    "Units per A$1M deployed",
+    250,
+    "units"
+   ],
+   [
+    "Gross revenue added per A$1M",
+    1011123,
+    "AUD/yr"
+   ],
+   [
+    "Net cash added per A$1M",
+    650951,
+    "AUD/yr"
+   ],
+   [
+    "Payback on A$1M",
+    1.54,
+    "years"
+   ],
+   [
+    "Use of funds: fleet & hardware",
+    0.55,
+    "share"
+   ],
+   [
+    "Use of funds: engineering",
+    0.25,
+    "share"
+   ],
+   [
+    "Use of funds: field ops & install",
+    0.12,
+    "share"
+   ],
+   [
+    "Use of funds: go-to-market",
+    0.08,
+    "share"
+   ]
+  ]
+ }
+}

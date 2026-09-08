@@ -1,0 +1,16 @@
+metric,value,unit,source
+TAM: Australian AI market by 2030,15000000000.0,AUD,Grand View Research / consensus (US$9.8B)
+SAM: AI-optimised infrastructure spend 2026,946000000.0,AUD,IDC Australia 2026
+SAM 2025,736760125,AUD,Derived from +128.4% YoY
+SAM growth YoY,28.4%,,IDC Australia 2026
+"SOM at 1,000 nodes",4448941,AUD,"Base case x 1,000"
+"SOM at 10,000 nodes",44489412,AUD,"Base case x 10,000"
+"Share of SAM at 1,000 nodes",0.47%,,
+"Share of SAM at 10,000 nodes",4.70%,,
+Homes with rooftop solar,4300000.0,homes,DCCEEW / Clean Energy Regulator
+...owner-occupied,3440000,homes,ESTIMATE 80%
+...in serviceable areas,2408000,homes,ESTIMATE 70%
+...physically suitable (eligible),1806000,homes,ESTIMATE 75%
+"Eligible share needed for 10,000 nodes",0.55%,,
+National rooftop solar output,40.0,TWh/yr,~28.3 GW fleet
+"Energy drawn by 10,000 nodes",0.010%,of national output,

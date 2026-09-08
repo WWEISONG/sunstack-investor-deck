@@ -1,0 +1,4 @@
+ownership_mix,gross_revenue_aud,node_contribution_aud,company_opex_aud,operating_cash_aud,capital_deployed_aud,return_on_capital,fleet_payback_years
+all company-owned,4448941,2871228,1400000,1471228,5140000,29%,3.5
+50/50,4448941,1833960,1400000,433960,2570000,17%,5.9
+all customer-owned,4448941,796693,1400000,-603307,0,n/a,never

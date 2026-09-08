@@ -1,0 +1,19 @@
+parameter,value,unit,status,source_or_test
+"Unit hardware (Ryzen AI Max+ 395, 128GB)",2800.0,AUD,VERIFIED,"Retail listings; US$1,499-1,999 at AUD/USD 0.722"
+Unit installation,400.0,AUD,ESTIMATE,TEST: firm installer quotes at volume
+Unit allocated platform + deployment,800.0,AUD,ESTIMATE,Platform build amortised across fleet
+Unit all-in capex,4000.0,AUD,DERIVED,hardware + install + platform
+"Spark hardware (NVIDIA DGX Spark, 128GB)",6500.0,AUD,VERIFIED,"US$4,699 (raised from $3,999 Feb 2026)"
+Spark all-in capex,7800.0,AUD,DERIVED,hardware + install + platform
+Unit node maintenance,400.0,AUD/yr,ESTIMATE,TEST: support hours from first cohort
+Spark node maintenance,500.0,AUD/yr,ESTIMATE,TEST: support hours from first cohort
+Unit average draw,120.0,W,ESTIMATE,TEST: metered draw in pilot
+Spark average draw,200.0,W,VERIFIED,240W supply rating (NVIDIA docs); 200W assumed average
+Grid purchase price,0.3,AUD/kWh,VERIFIED,Retail tariffs 2026 (30-40c)
+Surplus solar opportunity cost,0.05,AUD/kWh,VERIFIED,"State regulators 2026; export 3-6c, many 0c midday"
+Solar export tariff,0.04,AUD/kWh,VERIFIED,State regulators 2026
+Share of node energy from surplus solar,0.9,ratio,ESTIMATE,TEST: metered solar vs grid split in pilot
+"Company operating cost at 1,000 nodes",1400000.0,AUD/yr,ESTIMATE,~9 FTE + infrastructure + G&A
+Our share of a customer-owned node's pool,0.2,ratio,ASSUMPTION,"Commercial term, not yet contracted"
+"Customer price for a unit, installed",3900.0,AUD,ASSUMPTION,"Commercial term, not yet tested"
+AUD per USD,1.385,ratio,VERIFIED,AUD/USD 0.722 at 7 Sep 2026
